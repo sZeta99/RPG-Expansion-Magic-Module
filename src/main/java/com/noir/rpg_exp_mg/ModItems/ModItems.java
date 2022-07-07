@@ -15,7 +15,7 @@ public class ModItems {
             RpgExpansionMagicModuleMod.MOD_ID);
 
     public static final RegistryObject<Item> SCROLL = ITEMS.register("scroll",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Scroll(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

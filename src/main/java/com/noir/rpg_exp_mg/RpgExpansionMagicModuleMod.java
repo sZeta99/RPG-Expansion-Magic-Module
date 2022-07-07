@@ -1,6 +1,7 @@
 package com.noir.rpg_exp_mg;
 
-import com.noir.rpg_exp_mg.ModItems.ModItems;
+import com.noir.rpg_exp_mg.items.ModItems;
+
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -13,7 +14,6 @@ public class RpgExpansionMagicModuleMod {
 
     public RpgExpansionMagicModuleMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
         ModItems.register(eventBus);
 
     }

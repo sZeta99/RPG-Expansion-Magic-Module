@@ -1,8 +1,10 @@
 package com.noir.rpg_exp_mg.custom.tool;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult.Type;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
@@ -23,8 +25,8 @@ public class RayCast {
      * @return
      */
     public static BlockHitResult rayTrace(Level world, Player player, ClipContext.Fluid fluidMode) {
-        double range = 15;
 
+        double range = 15;
         float f = player.getXRot();
         float f1 = player.getYRot();
         Vec3 vector3d = player.getEyePosition(1.0F);
@@ -48,8 +50,8 @@ public class RayCast {
      * @return
      */
     public static BlockHitResult rayTrace(Level world, Player player, ClipContext.Fluid fluidMode, double rng) {
-        double range = rng;
 
+        double range = rng;
         float f = player.getXRot();
         float f1 = player.getYRot();
         Vec3 vector3d = player.getEyePosition(1.0F);
@@ -61,5 +63,15 @@ public class RayCast {
         float f7 = f2 * f4;
         Vec3 vector3d1 = vector3d.add((double) f6 * range, (double) f5 * range, (double) f7 * range);
         return world.clip(new ClipContext(vector3d, vector3d1, ClipContext.Block.OUTLINE, fluidMode, player));
+    }
+
+    public static BlockPos getPositionByLook(Level world, Player player, ClipContext.Fluid fluidMode, double rng) {
+
+        BlockHitResult ray = RayCast.rayTrace(world, player, fluidMode, rng);
+        if (ray.getType() != Type.MISS) {
+            return ray.getBlockPos().relative(ray.getDirection());
+        }
+        return null;
+
     }
 }

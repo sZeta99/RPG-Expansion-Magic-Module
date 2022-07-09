@@ -1,6 +1,6 @@
 package com.noir.rpg_exp_mg.items;
 
-import com.noir.rpg_exp_mg.spell.ISpell;
+import com.noir.rpg_exp_mg.custom.tool.CoolDown;
 import com.noir.rpg_exp_mg.spell.schools.arcane.ArcaneTeleport;
 
 import net.minecraft.world.InteractionHand;
@@ -11,7 +11,7 @@ import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class IScroll extends BowItem {
+public class IScroll extends BowItem implements ISpell {
 
     private ISpell spell;
 
@@ -19,19 +19,20 @@ public class IScroll extends BowItem {
         super(p_41383_);
         this.spell = new ArcaneTeleport();
 
-        // TODO Auto-generated constructor stub
     }
 
     @Override
-    public void releaseUsing(ItemStack p_40667_, Level p_40668_, LivingEntity p_40669_, int p_40670_) {
+    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
 
-        spell.releaseUsing(p_40667_, p_40668_, p_40669_, p_40670_);
+        CoolDown.addCoolDown(player, this, 50);
+        return spell.use(world, player, hand);
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level p_41432_, Player p_41433_, InteractionHand p_41434_) {
+    public void releaseUsing(ItemStack itemstaks, Level world, LivingEntity entity, int i) {
 
-        return spell.use(p_41432_, p_41433_, p_41434_);
+        spell.releaseUsing(itemstaks, world, entity, i);
+        CoolDown.addCoolDown((Player) entity, this, 50);
     }
 
 }

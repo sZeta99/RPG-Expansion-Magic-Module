@@ -18,7 +18,6 @@ public class IScroll extends BowItem implements ISpell {
     public IScroll(Properties p_41383_) {
         super(p_41383_);
         this.spell = new ArcaneTeleport();
-
     }
 
     @Override

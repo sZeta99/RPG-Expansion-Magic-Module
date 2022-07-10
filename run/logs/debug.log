@@ -1,180 +1,180 @@
-[09lug2022 18:49:57.352] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\Users\mauze\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 40.1.0, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914]
-[09lug2022 18:49:57.361] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.3 by Eclipse Adoptium
-[09lug2022 18:49:57.389] [main/DEBUG] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Found launch services [fmlclientdev,forgeclient,minecraft,forgegametestserverdev,fmlserveruserdev,fmlclient,fmldatauserdev,forgeserverdev,forgeserveruserdev,forgeclientdev,forgeclientuserdev,forgeserver,forgedatadev,fmlserver,fmlclientuserdev,fmlserverdev,forgedatauserdev,testharness,forgegametestserveruserdev]
-[09lug2022 18:49:57.437] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
-[09lug2022 18:49:57.480] [main/DEBUG] [cpw.mods.modlauncher.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,eventbus,slf4jfixer,object_holder_definalize,runtime_enum_extender,capability_token_subclass,accesstransformer,runtimedistcleaner]
-[09lug2022 18:49:57.507] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
-[09lug2022 18:49:57.517] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found additional transformation services from discovery services: java.util.stream.ReferencePipeline$3@591e58fa
-[09lug2022 18:49:57.541] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found transformer services : [mixin,fml]
-[09lug2022 18:49:57.542] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
-[09lug2022 18:49:57.545] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
-[09lug2022 18:49:57.547] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
-[09lug2022 18:49:57.548] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
-[09lug2022 18:49:57.554] [main/DEBUG] [net.minecraftforge.fml.loading.LauncherVersion/CORE]: Found FMLLauncher version 1.0
-[09lug2022 18:49:57.556] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML 1.0 loading
-[09lug2022 18:49:57.557] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found ModLauncher version : 9.1.3+9.1.3+main.9b69c82a
-[09lug2022 18:49:57.559] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found AccessTransformer version : 8.0.4+66+master.c09db6d7
-[09lug2022 18:49:57.561] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found EventBus version : 5.0.7+5.0.7+master.6d3407cc
-[09lug2022 18:49:57.562] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found Runtime Dist Cleaner
-[09lug2022 18:49:57.568] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found CoreMod version : 5.0.2+5.0.2+master.303343f8
-[09lug2022 18:49:57.569] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package implementation version 4.0.15-4.x+4.0.15-4.x+4.x.038e91c0
-[09lug2022 18:49:57.570] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package specification 4
-[09lug2022 18:49:57.575] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
-[09lug2022 18:49:57.578] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
-[09lug2022 18:49:57.594] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
-[09lug2022 18:49:57.596] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
-[09lug2022 18:49:57.647] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in cpw.mods.cl.ModuleClassLoader@7e07db1f
-[09lug2022 18:49:57.688] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/mauze/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2322!/ Service=ModLauncher Env=CLIENT
-[09lug2022 18:49:57.701] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
-[09lug2022 18:49:57.702] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[09lug2022 18:49:57.704] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
-[09lug2022 18:49:57.707] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[09lug2022 18:49:57.708] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
-[09lug2022 18:49:57.709] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[09lug2022 18:49:57.716] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
-[09lug2022 18:49:57.718] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
-[09lug2022 18:49:57.718] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Setting up basic FML game directories
-[09lug2022 18:49:57.722] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing GAMEDIR directory : C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run
-[09lug2022 18:49:57.724] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path GAMEDIR is C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run
-[09lug2022 18:49:57.726] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing MODSDIR directory : C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\mods
-[09lug2022 18:49:57.727] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path MODSDIR is C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\mods
-[09lug2022 18:49:57.729] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing CONFIGDIR directory : C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config
-[09lug2022 18:49:57.731] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path CONFIGDIR is C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config
-[09lug2022 18:49:57.732] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path FMLCONFIG is C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\fml.toml
-[09lug2022 18:49:57.732] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading configuration
-[09lug2022 18:49:57.826] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing default config directory directory : C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\defaultconfigs
-[09lug2022 18:49:57.827] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing ModFile
-[09lug2022 18:49:57.833] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing launch handler
-[09lug2022 18:49:57.835] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Using forgeclientuserdev as launch service
-[09lug2022 18:49:57.882] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Received command line version data  : VersionInfo[forgeVersion=40.1.0, mcVersion=1.18.2, mcpVersion=20220404.173914, forgeGroup=net.minecraftforge]
-[09lug2022 18:49:57.887] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
-[09lug2022 18:49:57.889] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
-[09lug2022 18:49:57.891] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=srgtomcp:1234}
-[09lug2022 18:49:57.893] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
-[09lug2022 18:49:57.896] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
-[09lug2022 18:49:57.897] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
-[09lug2022 18:49:57.898] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
-[09lug2022 18:49:57.900] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Initiating mod scan
-[09lug2022 18:49:57.931] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModListHandler/CORE]: Found mod coordinates from lists: []
-[09lug2022 18:49:57.938] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:null),(maven libs:null),(exploded directory:null),(minecraft:null),(userdev classpath:null)
-[09lug2022 18:49:57.954] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Got mod coordinates examplemod%%C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main;examplemod%%C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main from env
-[09lug2022 18:49:57.961] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{examplemod=[C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main, C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main]}]
-[09lug2022 18:49:58.692] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar with {minecraft} mods - versions {1.18.2}
-[09lug2022 18:49:58.700] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\mauze\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.18.2-40.1.0_mapped_official_1.18.2\forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
-[09lug2022 18:49:58.704] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main
-[09lug2022 18:49:58.721] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file main with {rpg_exp_mg} mods - versions {0.0NONE}
-[09lug2022 18:49:58.723] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main with languages [LanguageSpec[languageName=javafml, acceptedVersions=[40,)]]
-[09lug2022 18:49:58.726] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /
-[09lug2022 18:49:58.733] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {40.1.0}
-[09lug2022 18:49:58.735] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file / with languages [LanguageSpec[languageName=javafml, acceptedVersions=[24,]]]
-[09lug2022 18:49:58.823] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_method with Javascript path coremods/field_to_method.js
-[09lug2022 18:49:58.825] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_instanceof with Javascript path coremods/field_to_instanceof.js
-[09lug2022 18:49:58.826] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod add_bouncer_method with Javascript path coremods/add_bouncer_method.js
-[09lug2022 18:49:58.827] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod registry_object_binary_compat with Javascript path coremods/registry_object_binary_compat.js
-[09lug2022 18:49:58.828] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_method.js
-[09lug2022 18:49:58.828] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_instanceof.js
-[09lug2022 18:49:58.829] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/add_bouncer_method.js
-[09lug2022 18:49:58.830] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/registry_object_binary_compat.js
-[09lug2022 18:49:58.834] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
-[09lug2022 18:49:58.857] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found 2 language providers
-[09lug2022 18:49:58.860] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 1.0
-[09lug2022 18:49:58.863] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider javafml, version 40
-[09lug2022 18:49:58.875] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Configured system mods: [minecraft, forge]
-[09lug2022 18:49:58.876] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found system mod: minecraft
-[09lug2022 18:49:58.877] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found system mod: forge
-[09lug2022 18:49:58.887] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 0 mod requirements (0 mandatory, 0 optional)
-[09lug2022 18:49:58.891] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 0 mod requirements missing (0 mandatory, 0 optional)
-[09lug2022 18:49:59.911] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 28190 method mappings from methods.csv
-[09lug2022 18:49:59.963] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 27073 field mappings from fields.csv
-[09lug2022 18:50:00.061] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading transformers
-[09lug2022 18:50:00.062] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service mixin
-[09lug2022 18:50:00.063] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service mixin
-[09lug2022 18:50:00.064] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service fml
-[09lug2022 18:50:00.065] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading coremod transformers
-[09lug2022 18:50:00.066] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_method.js
-[09lug2022 18:50:00.352] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[09lug2022 18:50:00.353] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_instanceof.js
-[09lug2022 18:50:00.466] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[09lug2022 18:50:00.467] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/add_bouncer_method.js
-[09lug2022 18:50:00.536] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[09lug2022 18:50:00.537] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/registry_object_binary_compat.js
-[09lug2022 18:50:00.576] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[09lug2022 18:50:00.595] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@43f9dd56 to Target : CLASS {Lnet/minecraft/world/effect/MobEffectInstance;} {} {V}
-[09lug2022 18:50:00.598] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@33956d1a to Target : CLASS {Lnet/minecraft/world/level/block/LiquidBlock;} {} {V}
-[09lug2022 18:50:00.599] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@2e1ddc90 to Target : CLASS {Lnet/minecraft/world/item/BucketItem;} {} {V}
-[09lug2022 18:50:00.600] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@5b7c8930 to Target : CLASS {Lnet/minecraft/world/level/block/StairBlock;} {} {V}
-[09lug2022 18:50:00.601] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@58867cd5 to Target : CLASS {Lnet/minecraft/world/level/block/FlowerPotBlock;} {} {V}
-[09lug2022 18:50:00.603] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@40e32762 to Target : CLASS {Lnet/minecraft/world/item/ItemStack;} {} {V}
-[09lug2022 18:50:00.604] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@5a8ab2 to Target : CLASS {Lnet/minecraft/network/play/client/CClientSettingsPacket;} {} {V}
-[09lug2022 18:50:00.607] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@3f50b680 to Target : CLASS {Lnet/minecraftforge/registries/RegistryObject;} {} {V}
-[09lug2022 18:50:00.608] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service fml
-[09lug2022 18:50:02.164] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
-[09lug2022 18:50:02.165] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
-[09lug2022 18:50:02.166] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(minecraft)
-[09lug2022 18:50:02.167] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(minecraft)
-[09lug2022 18:50:02.167] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(minecraft)
-[09lug2022 18:50:02.168] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(minecraft)
-[09lug2022 18:50:02.169] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(minecraft)
-[09lug2022 18:50:02.169] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
-[09lug2022 18:50:02.170] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(rpg_exp_mg)
-[09lug2022 18:50:02.170] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(rpg_exp_mg)
-[09lug2022 18:50:02.171] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(rpg_exp_mg)
-[09lug2022 18:50:02.171] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(rpg_exp_mg)
-[09lug2022 18:50:02.172] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(rpg_exp_mg)
-[09lug2022 18:50:02.173] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(rpg_exp_mg)]
-[09lug2022 18:50:02.173] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(forge)
-[09lug2022 18:50:02.174] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(forge)
-[09lug2022 18:50:02.175] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(forge)
-[09lug2022 18:50:02.175] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(forge)
-[09lug2022 18:50:02.176] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(forge)
-[09lug2022 18:50:02.177] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
-[09lug2022 18:50:02.177] [main/DEBUG] [mixin/]: inject() running with 4 agents
-[09lug2022 18:50:02.178] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
-[09lug2022 18:50:02.179] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
-[09lug2022 18:50:02.180] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(rpg_exp_mg)]
-[09lug2022 18:50:02.180] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
-[09lug2022 18:50:02.223] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\mauze\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18]
-[09lug2022 18:50:02.368] [main/DEBUG] [mixin/]: Error cleaning class output directory: .mixin.out
-[09lug2022 18:50:02.378] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
-[09lug2022 18:50:02.422] [main/DEBUG] [io.netty.util.internal.logging.InternalLoggerFactory/]: Using SLF4J as the default logging framework
-[09lug2022 18:50:02.426] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
-[09lug2022 18:50:02.427] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
-[09lug2022 18:50:02.887] [main/DEBUG] [oshi.util.FileUtil/]: No oshi.properties file found from ClassLoader cpw.mods.modlauncher.TransformingClassLoader@54402c04
-[09lug2022 18:50:03.325] [main/DEBUG] [oshi.util.FileUtil/]: No oshi.architecture.properties file found from ClassLoader cpw.mods.modlauncher.TransformingClassLoader@54402c04
-[09lug2022 18:50:04.487] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/LiquidBlock
-[09lug2022 18:50:04.576] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/StairBlock
-[09lug2022 18:50:04.768] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/FlowerPotBlock
-[09lug2022 18:50:06.094] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/ItemStack
-[09lug2022 18:50:10.676] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/BucketItem
-[09lug2022 18:50:11.080] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/effect/MobEffectInstance
-[09lug2022 18:50:13.811] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/mauze/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.2-40.1.0_mapped_official_1.18.2/forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/assets/.mcassetsroot' uses unexpected schema
-[09lug2022 18:50:13.813] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/mauze/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.2-40.1.0_mapped_official_1.18.2/forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/data/.mcassetsroot' uses unexpected schema
-[09lug2022 18:50:13.842] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[09lug2022 18:50:13.855] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[09lug2022 18:50:14.424] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 SNAPSHOT
-[09lug2022 18:50:16.174] [Render thread/DEBUG] [net.minecraftforge.common.ForgeI18n/CORE]: Loading I18N data entries: 5349
-[09lug2022 18:50:16.224] [Render thread/DEBUG] [net.minecraftforge.fml.ModWorkManager/LOADING]: Using 12 threads for parallel mod-loading
-[09lug2022 18:50:16.241] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@54402c04 - got cpw.mods.cl.ModuleClassLoader@4917d36b
-[09lug2022 18:50:16.243] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for com.noir.rpg_exp_mg.RpgExpansionMagicModuleMod
-[09lug2022 18:50:16.257] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@54402c04 - got cpw.mods.cl.ModuleClassLoader@4917d36b
-[09lug2022 18:50:16.258] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for net.minecraftforge.common.ForgeMod
-[09lug2022 18:50:16.413] [modloading-worker-0/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraftforge/registries/RegistryObject
-[09lug2022 18:50:16.760] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Forge Version package package net.minecraftforge.versions.forge, Forge, version 40.1 from cpw.mods.modlauncher.TransformingClassLoader@54402c04
-[09lug2022 18:50:16.761] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge version 40.1.0
-[09lug2022 18:50:16.762] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge spec 40.1
-[09lug2022 18:50:16.763] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge group net.minecraftforge
-[09lug2022 18:50:16.765] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: MCP Version package package net.minecraftforge.versions.mcp, Minecraft, version 1.18.2 from cpw.mods.modlauncher.TransformingClassLoader@54402c04
-[09lug2022 18:50:16.766] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MC version information 1.18.2
-[09lug2022 18:50:16.767] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MCP version information 20220404.173914
-[09lug2022 18:50:16.767] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.1.0, for MC 1.18.2 with MCP 20220404.173914
-[09lug2022 18:50:16.768] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for rpg_exp_mg
-[09lug2022 18:50:16.775] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.1.0 Initialized
-[09lug2022 18:50:17.407] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: -Dio.netty.noUnsafe: false
-[09lug2022 18:50:17.408] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: Java version: 17
-[09lug2022 18:50:17.412] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.theUnsafe: available
-[09lug2022 18:50:17.413] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.copyMemory: available
-[09lug2022 18:50:17.414] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Buffer.address: available
-[09lug2022 18:50:17.415] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: direct buffer constructor: unavailable
+[10lug2022 15:27:01.594] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\Users\mauze\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 40.1.0, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914]
+[10lug2022 15:27:01.600] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.3 by Eclipse Adoptium
+[10lug2022 15:27:01.624] [main/DEBUG] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Found launch services [fmlclientdev,forgeclient,minecraft,forgegametestserverdev,fmlserveruserdev,fmlclient,fmldatauserdev,forgeserverdev,forgeserveruserdev,forgeclientdev,forgeclientuserdev,forgeserver,forgedatadev,fmlserver,fmlclientuserdev,fmlserverdev,forgedatauserdev,testharness,forgegametestserveruserdev]
+[10lug2022 15:27:01.665] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
+[10lug2022 15:27:01.688] [main/DEBUG] [cpw.mods.modlauncher.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,eventbus,slf4jfixer,object_holder_definalize,runtime_enum_extender,capability_token_subclass,accesstransformer,runtimedistcleaner]
+[10lug2022 15:27:01.710] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
+[10lug2022 15:27:01.720] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found additional transformation services from discovery services: java.util.stream.ReferencePipeline$3@591e58fa
+[10lug2022 15:27:01.741] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found transformer services : [mixin,fml]
+[10lug2022 15:27:01.742] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
+[10lug2022 15:27:01.744] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
+[10lug2022 15:27:01.745] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
+[10lug2022 15:27:01.746] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
+[10lug2022 15:27:01.753] [main/DEBUG] [net.minecraftforge.fml.loading.LauncherVersion/CORE]: Found FMLLauncher version 1.0
+[10lug2022 15:27:01.753] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML 1.0 loading
+[10lug2022 15:27:01.754] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found ModLauncher version : 9.1.3+9.1.3+main.9b69c82a
+[10lug2022 15:27:01.756] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found AccessTransformer version : 8.0.4+66+master.c09db6d7
+[10lug2022 15:27:01.757] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found EventBus version : 5.0.7+5.0.7+master.6d3407cc
+[10lug2022 15:27:01.758] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found Runtime Dist Cleaner
+[10lug2022 15:27:01.763] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found CoreMod version : 5.0.2+5.0.2+master.303343f8
+[10lug2022 15:27:01.765] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package implementation version 4.0.15-4.x+4.0.15-4.x+4.x.038e91c0
+[10lug2022 15:27:01.766] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package specification 4
+[10lug2022 15:27:01.772] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
+[10lug2022 15:27:01.775] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
+[10lug2022 15:27:01.791] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
+[10lug2022 15:27:01.793] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
+[10lug2022 15:27:01.847] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in cpw.mods.cl.ModuleClassLoader@7e07db1f
+[10lug2022 15:27:01.877] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/mauze/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2322!/ Service=ModLauncher Env=CLIENT
+[10lug2022 15:27:01.883] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
+[10lug2022 15:27:01.884] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[10lug2022 15:27:01.886] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[10lug2022 15:27:01.887] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[10lug2022 15:27:01.889] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[10lug2022 15:27:01.890] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[10lug2022 15:27:01.894] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
+[10lug2022 15:27:01.895] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
+[10lug2022 15:27:01.896] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Setting up basic FML game directories
+[10lug2022 15:27:01.898] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing GAMEDIR directory : C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run
+[10lug2022 15:27:01.900] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path GAMEDIR is C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run
+[10lug2022 15:27:01.901] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing MODSDIR directory : C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\mods
+[10lug2022 15:27:01.903] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path MODSDIR is C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\mods
+[10lug2022 15:27:01.904] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing CONFIGDIR directory : C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config
+[10lug2022 15:27:01.905] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path CONFIGDIR is C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config
+[10lug2022 15:27:01.906] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path FMLCONFIG is C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\fml.toml
+[10lug2022 15:27:01.907] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading configuration
+[10lug2022 15:27:01.981] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing default config directory directory : C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\defaultconfigs
+[10lug2022 15:27:01.982] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing ModFile
+[10lug2022 15:27:01.987] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing launch handler
+[10lug2022 15:27:01.989] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Using forgeclientuserdev as launch service
+[10lug2022 15:27:02.025] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Received command line version data  : VersionInfo[forgeVersion=40.1.0, mcVersion=1.18.2, mcpVersion=20220404.173914, forgeGroup=net.minecraftforge]
+[10lug2022 15:27:02.029] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
+[10lug2022 15:27:02.031] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
+[10lug2022 15:27:02.033] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=srgtomcp:1234}
+[10lug2022 15:27:02.034] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
+[10lug2022 15:27:02.035] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
+[10lug2022 15:27:02.036] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
+[10lug2022 15:27:02.037] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
+[10lug2022 15:27:02.037] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Initiating mod scan
+[10lug2022 15:27:02.056] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModListHandler/CORE]: Found mod coordinates from lists: []
+[10lug2022 15:27:02.059] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:null),(maven libs:null),(exploded directory:null),(minecraft:null),(userdev classpath:null)
+[10lug2022 15:27:02.071] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Got mod coordinates examplemod%%C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main;examplemod%%C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main from env
+[10lug2022 15:27:02.075] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{examplemod=[C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main, C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main]}]
+[10lug2022 15:27:02.662] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar with {minecraft} mods - versions {1.18.2}
+[10lug2022 15:27:02.668] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\mauze\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.18.2-40.1.0_mapped_official_1.18.2\forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
+[10lug2022 15:27:02.671] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main
+[10lug2022 15:27:02.682] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file main with {rpg_exp_mg} mods - versions {0.0NONE}
+[10lug2022 15:27:02.683] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main with languages [LanguageSpec[languageName=javafml, acceptedVersions=[40,)]]
+[10lug2022 15:27:02.686] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /
+[10lug2022 15:27:02.691] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {40.1.0}
+[10lug2022 15:27:02.692] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file / with languages [LanguageSpec[languageName=javafml, acceptedVersions=[24,]]]
+[10lug2022 15:27:02.748] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_method with Javascript path coremods/field_to_method.js
+[10lug2022 15:27:02.749] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_instanceof with Javascript path coremods/field_to_instanceof.js
+[10lug2022 15:27:02.750] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod add_bouncer_method with Javascript path coremods/add_bouncer_method.js
+[10lug2022 15:27:02.750] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod registry_object_binary_compat with Javascript path coremods/registry_object_binary_compat.js
+[10lug2022 15:27:02.751] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_method.js
+[10lug2022 15:27:02.751] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_instanceof.js
+[10lug2022 15:27:02.752] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/add_bouncer_method.js
+[10lug2022 15:27:02.752] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/registry_object_binary_compat.js
+[10lug2022 15:27:02.755] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
+[10lug2022 15:27:02.777] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found 2 language providers
+[10lug2022 15:27:02.779] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 1.0
+[10lug2022 15:27:02.781] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider javafml, version 40
+[10lug2022 15:27:02.789] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Configured system mods: [minecraft, forge]
+[10lug2022 15:27:02.791] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found system mod: minecraft
+[10lug2022 15:27:02.791] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found system mod: forge
+[10lug2022 15:27:02.800] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 0 mod requirements (0 mandatory, 0 optional)
+[10lug2022 15:27:02.802] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 0 mod requirements missing (0 mandatory, 0 optional)
+[10lug2022 15:27:03.616] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 28190 method mappings from methods.csv
+[10lug2022 15:27:03.660] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 27073 field mappings from fields.csv
+[10lug2022 15:27:03.732] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading transformers
+[10lug2022 15:27:03.734] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service mixin
+[10lug2022 15:27:03.735] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service mixin
+[10lug2022 15:27:03.736] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service fml
+[10lug2022 15:27:03.737] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading coremod transformers
+[10lug2022 15:27:03.738] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_method.js
+[10lug2022 15:27:04.003] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[10lug2022 15:27:04.004] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_instanceof.js
+[10lug2022 15:27:04.103] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[10lug2022 15:27:04.104] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/add_bouncer_method.js
+[10lug2022 15:27:04.165] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[10lug2022 15:27:04.166] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/registry_object_binary_compat.js
+[10lug2022 15:27:04.200] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[10lug2022 15:27:04.217] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@1d12e953 to Target : CLASS {Lnet/minecraft/world/effect/MobEffectInstance;} {} {V}
+[10lug2022 15:27:04.221] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@2e1ddc90 to Target : CLASS {Lnet/minecraft/world/level/block/LiquidBlock;} {} {V}
+[10lug2022 15:27:04.222] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@5b7c8930 to Target : CLASS {Lnet/minecraft/world/item/BucketItem;} {} {V}
+[10lug2022 15:27:04.223] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@58867cd5 to Target : CLASS {Lnet/minecraft/world/level/block/StairBlock;} {} {V}
+[10lug2022 15:27:04.224] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@40e32762 to Target : CLASS {Lnet/minecraft/world/level/block/FlowerPotBlock;} {} {V}
+[10lug2022 15:27:04.226] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@5a8ab2 to Target : CLASS {Lnet/minecraft/world/item/ItemStack;} {} {V}
+[10lug2022 15:27:04.227] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@3f50b680 to Target : CLASS {Lnet/minecraft/network/play/client/CClientSettingsPacket;} {} {V}
+[10lug2022 15:27:04.228] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@54db056b to Target : CLASS {Lnet/minecraftforge/registries/RegistryObject;} {} {V}
+[10lug2022 15:27:04.229] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service fml
+[10lug2022 15:27:05.461] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[10lug2022 15:27:05.462] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[10lug2022 15:27:05.463] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(minecraft)
+[10lug2022 15:27:05.463] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(minecraft)
+[10lug2022 15:27:05.464] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(minecraft)
+[10lug2022 15:27:05.465] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(minecraft)
+[10lug2022 15:27:05.465] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(minecraft)
+[10lug2022 15:27:05.466] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[10lug2022 15:27:05.467] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(rpg_exp_mg)
+[10lug2022 15:27:05.467] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(rpg_exp_mg)
+[10lug2022 15:27:05.468] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(rpg_exp_mg)
+[10lug2022 15:27:05.468] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(rpg_exp_mg)
+[10lug2022 15:27:05.469] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(rpg_exp_mg)
+[10lug2022 15:27:05.469] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(rpg_exp_mg)]
+[10lug2022 15:27:05.470] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(forge)
+[10lug2022 15:27:05.471] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(forge)
+[10lug2022 15:27:05.471] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(forge)
+[10lug2022 15:27:05.472] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(forge)
+[10lug2022 15:27:05.472] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(forge)
+[10lug2022 15:27:05.473] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
+[10lug2022 15:27:05.474] [main/DEBUG] [mixin/]: inject() running with 4 agents
+[10lug2022 15:27:05.474] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[10lug2022 15:27:05.475] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[10lug2022 15:27:05.475] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(rpg_exp_mg)]
+[10lug2022 15:27:05.477] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
+[10lug2022 15:27:05.511] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\mauze\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18]
+[10lug2022 15:27:05.630] [main/DEBUG] [mixin/]: Error cleaning class output directory: .mixin.out
+[10lug2022 15:27:05.638] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[10lug2022 15:27:05.676] [main/DEBUG] [io.netty.util.internal.logging.InternalLoggerFactory/]: Using SLF4J as the default logging framework
+[10lug2022 15:27:05.680] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
+[10lug2022 15:27:05.681] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
+[10lug2022 15:27:06.148] [main/DEBUG] [oshi.util.FileUtil/]: No oshi.properties file found from ClassLoader cpw.mods.modlauncher.TransformingClassLoader@54402c04
+[10lug2022 15:27:06.562] [main/DEBUG] [oshi.util.FileUtil/]: No oshi.architecture.properties file found from ClassLoader cpw.mods.modlauncher.TransformingClassLoader@54402c04
+[10lug2022 15:27:07.587] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/LiquidBlock
+[10lug2022 15:27:07.665] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/StairBlock
+[10lug2022 15:27:07.785] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/FlowerPotBlock
+[10lug2022 15:27:09.297] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/ItemStack
+[10lug2022 15:27:13.700] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/BucketItem
+[10lug2022 15:27:14.030] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/effect/MobEffectInstance
+[10lug2022 15:27:16.737] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/mauze/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.2-40.1.0_mapped_official_1.18.2/forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/assets/.mcassetsroot' uses unexpected schema
+[10lug2022 15:27:16.743] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/mauze/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.2-40.1.0_mapped_official_1.18.2/forge-1.18.2-40.1.0_mapped_official_1.18.2-recomp.jar%2376!/data/.mcassetsroot' uses unexpected schema
+[10lug2022 15:27:16.781] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[10lug2022 15:27:16.798] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[10lug2022 15:27:17.192] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+[10lug2022 15:27:19.169] [Render thread/DEBUG] [net.minecraftforge.common.ForgeI18n/CORE]: Loading I18N data entries: 5349
+[10lug2022 15:27:19.299] [Render thread/DEBUG] [net.minecraftforge.fml.ModWorkManager/LOADING]: Using 12 threads for parallel mod-loading
+[10lug2022 15:27:19.324] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@54402c04 - got cpw.mods.cl.ModuleClassLoader@4917d36b
+[10lug2022 15:27:19.326] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for com.noir.rpg_exp_mg.RpgExpansionMagicModuleMod
+[10lug2022 15:27:19.340] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@54402c04 - got cpw.mods.cl.ModuleClassLoader@4917d36b
+[10lug2022 15:27:19.341] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for net.minecraftforge.common.ForgeMod
+[10lug2022 15:27:19.491] [modloading-worker-0/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraftforge/registries/RegistryObject
+[10lug2022 15:27:19.839] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Forge Version package package net.minecraftforge.versions.forge, Forge, version 40.1 from cpw.mods.modlauncher.TransformingClassLoader@54402c04
+[10lug2022 15:27:19.841] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge version 40.1.0
+[10lug2022 15:27:19.841] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge spec 40.1
+[10lug2022 15:27:19.842] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge group net.minecraftforge
+[10lug2022 15:27:19.844] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: MCP Version package package net.minecraftforge.versions.mcp, Minecraft, version 1.18.2 from cpw.mods.modlauncher.TransformingClassLoader@54402c04
+[10lug2022 15:27:19.845] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MC version information 1.18.2
+[10lug2022 15:27:19.846] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MCP version information 20220404.173914
+[10lug2022 15:27:19.846] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.1.0, for MC 1.18.2 with MCP 20220404.173914
+[10lug2022 15:27:19.850] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for rpg_exp_mg
+[10lug2022 15:27:19.851] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.1.0 Initialized
+[10lug2022 15:27:20.202] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: -Dio.netty.noUnsafe: false
+[10lug2022 15:27:20.203] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: Java version: 17
+[10lug2022 15:27:20.205] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.theUnsafe: available
+[10lug2022 15:27:20.207] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.copyMemory: available
+[10lug2022 15:27:20.208] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Buffer.address: available
+[10lug2022 15:27:20.210] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: direct buffer constructor: unavailable
 java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
 	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-all-4.1.68.Final.jar%2332!/:4.1.68.Final]
 	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:253) ~[netty-all-4.1.68.Final.jar%2332!/:4.1.68.Final]
@@ -201,8 +201,8 @@ java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
 	at java.util.concurrent.ForkJoinPool.scan(Unknown Source) [?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) [?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) [?:?]
-[09lug2022 18:50:17.427] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Bits.unaligned: available, true
-[09lug2022 18:50:17.430] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+[10lug2022 15:27:20.273] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Bits.unaligned: available, true
+[10lug2022 15:27:20.361] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
 java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 (in module io.netty.all) cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to module io.netty.all
 	at jdk.internal.reflect.Reflection.newIllegalAccessException(Unknown Source) ~[?:?]
 	at java.lang.reflect.AccessibleObject.checkAccess(Unknown Source) ~[?:?]
@@ -231,47 +231,47 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
 	at java.util.concurrent.ForkJoinPool.scan(Unknown Source) [?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) [?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) [?:?]
-[09lug2022 18:50:17.440] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.DirectByteBuffer.<init>(long, int): unavailable
-[09lug2022 18:50:17.441] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: sun.misc.Unsafe: available
-[09lug2022 18:50:17.443] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: maxDirectMemory: 4248829952 bytes (maybe)
-[09lug2022 18:50:17.444] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.tmpdir: C:\Users\mauze\AppData\Local\Temp (java.io.tmpdir)
-[09lug2022 18:50:17.445] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
-[09lug2022 18:50:17.446] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: Platform: Windows
-[09lug2022 18:50:17.448] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.maxDirectMemory: -1 bytes
-[09lug2022 18:50:17.488] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.uninitializedArrayAllocationThreshold: -1
-[09lug2022 18:50:17.508] [modloading-worker-0/DEBUG] [io.netty.util.internal.CleanerJava9/]: java.nio.ByteBuffer.cleaner(): available
-[09lug2022 18:50:17.509] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.noPreferDirect: false
-[09lug2022 18:50:17.731] [modloading-worker-0/DEBUG] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Loading Network data for FML net version: FML2
-[09lug2022 18:50:17.888] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-client.toml for forge tracking
-[09lug2022 18:50:17.898] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-server.toml for forge tracking
-[09lug2022 18:50:17.901] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-common.toml for forge tracking
-[09lug2022 18:50:18.066] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for forge
-[09lug2022 18:50:18.072] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$CommonHandler to MOD
-[09lug2022 18:50:18.078] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$ColorRegisterHandler to MOD
-[09lug2022 18:50:18.132] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.model.ModelDataManager to FORGE
-[09lug2022 18:50:18.158] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.ForgeHooksClient$ClientEvents to MOD
-[09lug2022 18:50:19.020] [Render thread/DEBUG] [net.minecraftforge.client.loading.ClientModLoader/CORE]: Generating PackInfo named mod:rpg_exp_mg for mod file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main
-[09lug2022 18:50:19.022] [Render thread/DEBUG] [net.minecraftforge.client.loading.ClientModLoader/CORE]: Generating PackInfo named mod:forge for mod file /
-[09lug2022 18:50:20.995] [Render thread/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-[09lug2022 18:50:21.001] [Render thread/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-[09lug2022 18:50:21.003] [Render thread/DEBUG] [io.netty.util.internal.ThreadLocalRandom/]: -Dio.netty.initialSeedUniquifier: 0xebdb682b41ba7845
-[09lug2022 18:50:21.559] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
-[09lug2022 18:50:21.736] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [examplemod]
-[09lug2022 18:50:22.285] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[09lug2022 18:50:22.341] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type CLIENT
-[09lug2022 18:50:22.362] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\forge-client.toml
-[09lug2022 18:50:22.382] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\forge-client.toml
-[09lug2022 18:50:22.399] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\forge-client.toml for changes
-[09lug2022 18:50:22.468] [modloading-worker-0/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Loaded forge config file forge-client.toml
-[09lug2022 18:50:22.477] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type COMMON
-[09lug2022 18:50:22.497] [Thread-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Config file forge-client.toml changed, sending notifies
-[09lug2022 18:50:22.532] [Thread-0/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Forge config just got changed on the file system!
-[09lug2022 18:50:22.531] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\forge-common.toml
-[09lug2022 18:50:22.572] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\forge-common.toml
-[09lug2022 18:50:22.739] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\forge-common.toml for changes
-[09lug2022 18:50:22.795] [modloading-worker-0/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Loaded forge config file forge-common.toml
-[09lug2022 18:50:24.370] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[09lug2022 18:50:25.954] [Forge Version Check/DEBUG] [net.minecraftforge.fml.VersionChecker/]: [forge] Received version check data:
+[10lug2022 15:27:20.400] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.DirectByteBuffer.<init>(long, int): unavailable
+[10lug2022 15:27:20.423] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: sun.misc.Unsafe: available
+[10lug2022 15:27:20.440] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: maxDirectMemory: 4248829952 bytes (maybe)
+[10lug2022 15:27:20.468] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.tmpdir: C:\Users\mauze\AppData\Local\Temp (java.io.tmpdir)
+[10lug2022 15:27:20.488] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[10lug2022 15:27:20.491] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: Platform: Windows
+[10lug2022 15:27:20.511] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.maxDirectMemory: -1 bytes
+[10lug2022 15:27:20.511] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[10lug2022 15:27:20.513] [modloading-worker-0/DEBUG] [io.netty.util.internal.CleanerJava9/]: java.nio.ByteBuffer.cleaner(): available
+[10lug2022 15:27:20.514] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.noPreferDirect: false
+[10lug2022 15:27:20.596] [modloading-worker-0/DEBUG] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Loading Network data for FML net version: FML2
+[10lug2022 15:27:20.664] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-client.toml for forge tracking
+[10lug2022 15:27:20.665] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-server.toml for forge tracking
+[10lug2022 15:27:20.666] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-common.toml for forge tracking
+[10lug2022 15:27:20.761] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for forge
+[10lug2022 15:27:20.766] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$CommonHandler to MOD
+[10lug2022 15:27:20.801] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$ColorRegisterHandler to MOD
+[10lug2022 15:27:20.820] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.model.ModelDataManager to FORGE
+[10lug2022 15:27:20.847] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.ForgeHooksClient$ClientEvents to MOD
+[10lug2022 15:27:21.680] [Render thread/DEBUG] [net.minecraftforge.client.loading.ClientModLoader/CORE]: Generating PackInfo named mod:rpg_exp_mg for mod file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main
+[10lug2022 15:27:21.682] [Render thread/DEBUG] [net.minecraftforge.client.loading.ClientModLoader/CORE]: Generating PackInfo named mod:forge for mod file /
+[10lug2022 15:27:23.750] [Render thread/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[10lug2022 15:27:23.752] [Render thread/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[10lug2022 15:27:23.754] [Render thread/DEBUG] [io.netty.util.internal.ThreadLocalRandom/]: -Dio.netty.initialSeedUniquifier: 0x0f5ac3e38e638596
+[10lug2022 15:27:24.260] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[10lug2022 15:27:24.383] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [examplemod]
+[10lug2022 15:27:25.033] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[10lug2022 15:27:25.144] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type CLIENT
+[10lug2022 15:27:25.147] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\forge-client.toml
+[10lug2022 15:27:25.149] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\forge-client.toml
+[10lug2022 15:27:25.170] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\forge-client.toml for changes
+[10lug2022 15:27:25.235] [modloading-worker-0/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Loaded forge config file forge-client.toml
+[10lug2022 15:27:25.265] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type COMMON
+[10lug2022 15:27:25.280] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\forge-common.toml
+[10lug2022 15:27:25.319] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\forge-common.toml
+[10lug2022 15:27:25.322] [Thread-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Config file forge-client.toml changed, sending notifies
+[10lug2022 15:27:25.405] [Thread-0/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Forge config just got changed on the file system!
+[10lug2022 15:27:25.406] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\run\config\forge-common.toml for changes
+[10lug2022 15:27:25.438] [modloading-worker-0/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Loaded forge config file forge-common.toml
+[10lug2022 15:27:27.916] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[10lug2022 15:27:30.128] [Forge Version Check/DEBUG] [net.minecraftforge.fml.VersionChecker/]: [forge] Received version check data:
 {
   "homepage": "https://files.minecraftforge.net/net/minecraftforge/forge/",
   "promos": {
@@ -349,153 +349,146 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
     "1.18.1-recommended": "39.1.0",
     "1.18.2-latest": "40.1.60",
     "1.18.2-recommended": "40.1.0",
-    "1.19-latest": "41.0.82"
+    "1.19-latest": "41.0.87"
   }
 }
-[09lug2022 18:50:25.972] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 40.1.0 Target: null
-[09lug2022 18:50:51.369] [Worker-Main-17/WARN] [net.minecraft.client.renderer.texture.TextureAtlas/]: Texture rpg_exp_mg:item/scrolltest with size 224x225 limits mip level from 4 to 0
-[09lug2022 18:50:56.438] [Render thread/DEBUG] [net.minecraftforge.common.ForgeI18n/CORE]: Loading I18N data entries: 5583
-[09lug2022 18:50:57.456] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)
-[09lug2022 18:50:57.464] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[09lug2022 18:50:58.011] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[09lug2022 18:50:58.195] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
-[09lug2022 18:50:58.198] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[09lug2022 18:50:58.209] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[09lug2022 18:50:58.236] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[09lug2022 18:50:58.240] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[09lug2022 18:50:58.245] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[09lug2022 18:51:03.943] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[09lug2022 18:51:03.972] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[09lug2022 18:51:03.978] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[09lug2022 18:51:05.028] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[09lug2022 18:51:11.166] [Render thread/DEBUG] [net.minecraftforge.server.ServerLifecycleHooks/CORE]: Generating PackInfo named mod:rpg_exp_mg for mod file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main
-[09lug2022 18:51:11.167] [Render thread/DEBUG] [net.minecraftforge.server.ServerLifecycleHooks/CORE]: Generating PackInfo named mod:forge for mod file /
-[09lug2022 18:51:12.758] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[09lug2022 18:51:12.760] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[09lug2022 18:51:12.766] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[09lug2022 18:51:12.769] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[09lug2022 18:51:12.772] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[09lug2022 18:51:15.994] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
-[09lug2022 18:51:17.779] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1141 advancements
-[09lug2022 18:51:17.808] [Render thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: Gathering id map for writing to world save New World
-[09lug2022 18:51:17.818] [Render thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: ID Map collection complete New World
-[09lug2022 18:51:18.231] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[09lug2022 18:51:18.263] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.18.2
-[09lug2022 18:51:18.264] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[09lug2022 18:51:18.401] [Server thread/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing serverconfig directory : .\saves\New World\serverconfig
-[09lug2022 18:51:18.402] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type SERVER
-[09lug2022 18:51:18.402] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for .\saves\New World\serverconfig\forge-server.toml
-[09lug2022 18:51:18.404] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file .\saves\New World\serverconfig\forge-server.toml
-[09lug2022 18:51:18.405] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file .\saves\New World\serverconfig\forge-server.toml for changes
-[09lug2022 18:51:18.406] [Server thread/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Loaded forge config file forge-server.toml
-[09lug2022 18:51:18.649] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[09lug2022 18:51:19.933] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[09lug2022 18:51:19.934] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[09lug2022 18:51:19.934] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[09lug2022 18:51:20.237] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[09lug2022 18:51:20.718] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[09lug2022 18:51:21.203] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[09lug2022 18:51:21.704] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[09lug2022 18:51:22.391] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
-[09lug2022 18:51:22.717] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 8%
-[09lug2022 18:51:23.224] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 8%
-[09lug2022 18:51:23.724] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 15%
-[09lug2022 18:51:24.217] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 55%
-[09lug2022 18:51:25.101] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[09lug2022 18:51:25.126] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 6436 ms
-[09lug2022 18:51:25.287] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[09lug2022 18:51:25.294] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[09lug2022 18:51:25.345] [Render thread/DEBUG] [io.netty.channel.MultithreadEventLoopGroup/]: -Dio.netty.eventLoopThreads: 24
-[09lug2022 18:51:25.399] [Render thread/DEBUG] [io.netty.channel.nio.NioEventLoop/]: -Dio.netty.noKeySetOptimization: false
-[09lug2022 18:51:25.400] [Render thread/DEBUG] [io.netty.channel.nio.NioEventLoop/]: -Dio.netty.selectorAutoRebuildThreshold: 512
-[09lug2022 18:51:25.418] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: org.jctools-core.MpscChunkedArrayQueue: available
-[09lug2022 18:51:25.534] [Render thread/DEBUG] [io.netty.channel.DefaultChannelId/]: -Dio.netty.processId: 14112 (auto-detected)
-[09lug2022 18:51:25.539] [Render thread/DEBUG] [io.netty.util.NetUtil/]: -Djava.net.preferIPv4Stack: false
-[09lug2022 18:51:25.540] [Render thread/DEBUG] [io.netty.util.NetUtil/]: -Djava.net.preferIPv6Addresses: false
-[09lug2022 18:51:25.572] [Render thread/DEBUG] [io.netty.util.NetUtilInitializations/]: Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
-[09lug2022 18:51:25.575] [Render thread/DEBUG] [io.netty.util.NetUtil/]: Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
-[09lug2022 18:51:25.648] [Render thread/DEBUG] [io.netty.channel.DefaultChannelId/]: -Dio.netty.machineId: 70:9c:d1:ff:fe:47:62:65 (auto-detected)
-[09lug2022 18:51:25.732] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numHeapArenas: 24
-[09lug2022 18:51:25.735] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numDirectArenas: 24
-[09lug2022 18:51:25.735] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.pageSize: 8192
-[09lug2022 18:51:25.736] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxOrder: 11
-[09lug2022 18:51:25.737] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.chunkSize: 16777216
-[09lug2022 18:51:25.737] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.smallCacheSize: 256
-[09lug2022 18:51:25.737] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.normalCacheSize: 64
-[09lug2022 18:51:25.738] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-[09lug2022 18:51:25.738] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimInterval: 8192
-[09lug2022 18:51:25.739] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimIntervalMillis: 0
-[09lug2022 18:51:25.739] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.useCacheForAllThreads: true
-[09lug2022 18:51:25.739] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
-[09lug2022 18:51:25.763] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.allocator.type: pooled
-[09lug2022 18:51:25.764] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.threadLocalDirectBufferSize: 0
-[09lug2022 18:51:25.764] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.maxThreadLocalCharBufferSize: 16384
-[09lug2022 18:51:25.834] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Starting local connection.
-[09lug2022 18:51:26.091] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.maxCapacityPerThread: 4096
-[09lug2022 18:51:26.091] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.maxSharedCapacityFactor: 2
-[09lug2022 18:51:26.092] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.linkCapacity: 16
-[09lug2022 18:51:26.092] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.ratio: 8
-[09lug2022 18:51:26.093] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.delayedQueue.ratio: 8
-[09lug2022 18:51:26.127] [Netty Server IO #1/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkAccessible: true
-[09lug2022 18:51:26.129] [Netty Server IO #1/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkBounds: true
-[09lug2022 18:51:26.131] [Netty Server IO #1/DEBUG] [io.netty.util.ResourceLeakDetectorFactory/]: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3c93ddd
-[09lug2022 18:51:26.139] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Starting local connection.
-[09lug2022 18:51:26.402] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'net.minecraftforge.network.HandshakeMessages$S2CModList' to 'fml:handshake' sequence 0
-[09lug2022 18:51:26.417] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 0
-[09lug2022 18:51:26.421] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Logging into server with mod list [minecraft, rpg_exp_mg, forge]
-[09lug2022 18:51:26.424] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:loginwrapper' : Version test of 'FML2' from server : ACCEPTED
-[09lug2022 18:51:26.425] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:tier_sorting' : Version test of '1.0' from server : ACCEPTED
-[09lug2022 18:51:26.426] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:handshake' : Version test of 'FML2' from server : ACCEPTED
-[09lug2022 18:51:26.426] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:unregister' : Version test of 'FML2' from server : ACCEPTED
-[09lug2022 18:51:26.427] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:play' : Version test of 'FML2' from server : ACCEPTED
-[09lug2022 18:51:26.428] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:register' : Version test of 'FML2' from server : ACCEPTED
-[09lug2022 18:51:26.428] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:split' : Version test of '1.1' from server : ACCEPTED
-[09lug2022 18:51:26.429] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Accepting channel list from server
-[09lug2022 18:51:26.432] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Dispatching wrapped packet reply for channel fml:handshake with index 0
-[09lug2022 18:51:26.433] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Accepted server connection
-[09lug2022 18:51:26.434] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 0
-[09lug2022 18:51:26.435] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client indexed reply 0 of type net.minecraftforge.network.HandshakeMessages$C2SModListReply
-[09lug2022 18:51:26.436] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client connection with modlist [minecraft, rpg_exp_mg, forge]
-[09lug2022 18:51:26.437] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:loginwrapper' : Version test of 'FML2' from client : ACCEPTED
-[09lug2022 18:51:26.438] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:tier_sorting' : Version test of '1.0' from client : ACCEPTED
-[09lug2022 18:51:26.439] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:handshake' : Version test of 'FML2' from client : ACCEPTED
-[09lug2022 18:51:26.439] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:unregister' : Version test of 'FML2' from client : ACCEPTED
-[09lug2022 18:51:26.440] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:play' : Version test of 'FML2' from client : ACCEPTED
-[09lug2022 18:51:26.440] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:register' : Version test of 'FML2' from client : ACCEPTED
-[09lug2022 18:51:26.441] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:split' : Version test of '1.1' from client : ACCEPTED
-[09lug2022 18:51:26.441] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Accepting channel list from client
-[09lug2022 18:51:26.442] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Accepted client connection mod list
-[09lug2022 18:51:26.463] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'Config forge-server.toml' to 'fml:handshake' sequence 1
-[09lug2022 18:51:26.466] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 1
-[09lug2022 18:51:26.467] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received config sync from server
-[09lug2022 18:51:26.468] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Dispatching wrapped packet reply for channel fml:handshake with index 1
-[09lug2022 18:51:26.469] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 1
-[09lug2022 18:51:26.469] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client indexed reply 1 of type net.minecraftforge.network.HandshakeMessages$C2SAcknowledge
-[09lug2022 18:51:26.470] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received acknowledgement from client
-[09lug2022 18:51:26.513] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Handshake complete!
-[09lug2022 18:51:26.564] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[09lug2022 18:51:26.638] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@13384b02
-[09lug2022 18:51:26.660] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:48359432] logged in with entity id 97 at (476.0, 67.0, -814.0)
-[09lug2022 18:51:26.715] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[09lug2022 18:51:28.313] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 7 advancements
-[09lug2022 18:51:53.934] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[09lug2022 18:51:53.951] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[09lug2022 18:51:54.008] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[09lug2022 18:51:54.014] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[09lug2022 18:51:54.021] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: Gathering id map for writing to world save New World
-[09lug2022 18:51:54.032] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: ID Map collection complete New World
-[09lug2022 18:51:54.872] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[09lug2022 18:51:54.874] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[09lug2022 18:51:54.897] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
-[09lug2022 18:51:54.941] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[09lug2022 18:51:54.942] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[09lug2022 18:51:54.943] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[09lug2022 18:51:59.077] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[09lug2022 18:51:59.281] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[09lug2022 18:51:59.284] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[09lug2022 18:51:59.286] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: Gathering id map for writing to world save New World
-[09lug2022 18:51:59.292] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: ID Map collection complete New World
-[09lug2022 18:51:59.313] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[09lug2022 18:51:59.314] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[09lug2022 18:51:59.314] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[09lug2022 18:51:59.315] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[10lug2022 15:27:30.238] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 40.1.0 Target: null
+[10lug2022 15:27:52.762] [Worker-Main-12/WARN] [net.minecraft.client.renderer.texture.TextureAtlas/]: Texture rpg_exp_mg:item/scrolltest with size 224x225 limits mip level from 4 to 0
+[10lug2022 15:27:58.212] [Render thread/DEBUG] [net.minecraftforge.common.ForgeI18n/CORE]: Loading I18N data entries: 5583
+[10lug2022 15:27:59.239] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)
+[10lug2022 15:27:59.242] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[10lug2022 15:27:59.855] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[10lug2022 15:28:00.054] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[10lug2022 15:28:00.057] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[10lug2022 15:28:00.068] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[10lug2022 15:28:00.080] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[10lug2022 15:28:00.085] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[10lug2022 15:28:00.090] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[10lug2022 15:28:06.246] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[10lug2022 15:28:06.283] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[10lug2022 15:28:06.290] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[10lug2022 15:28:08.577] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[10lug2022 15:28:19.208] [Render thread/DEBUG] [net.minecraftforge.server.ServerLifecycleHooks/CORE]: Generating PackInfo named mod:rpg_exp_mg for mod file C:\Users\mauze\Documents\GitHub\RPG-Expansion-Magic-Module\bin\main
+[10lug2022 15:28:19.209] [Render thread/DEBUG] [net.minecraftforge.server.ServerLifecycleHooks/CORE]: Generating PackInfo named mod:forge for mod file /
+[10lug2022 15:28:20.916] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[10lug2022 15:28:20.919] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[10lug2022 15:28:20.925] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[10lug2022 15:28:20.928] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[10lug2022 15:28:20.930] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[10lug2022 15:28:23.878] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
+[10lug2022 15:28:25.625] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1141 advancements
+[10lug2022 15:28:25.647] [Render thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: Gathering id map for writing to world save New World
+[10lug2022 15:28:25.656] [Render thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: ID Map collection complete New World
+[10lug2022 15:28:26.094] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[10lug2022 15:28:26.122] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.18.2
+[10lug2022 15:28:26.123] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[10lug2022 15:28:26.222] [Server thread/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing serverconfig directory : .\saves\New World\serverconfig
+[10lug2022 15:28:26.223] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type SERVER
+[10lug2022 15:28:26.223] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for .\saves\New World\serverconfig\forge-server.toml
+[10lug2022 15:28:26.223] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file .\saves\New World\serverconfig\forge-server.toml
+[10lug2022 15:28:26.225] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file .\saves\New World\serverconfig\forge-server.toml for changes
+[10lug2022 15:28:26.226] [Server thread/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Loaded forge config file forge-server.toml
+[10lug2022 15:28:26.449] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[10lug2022 15:28:27.479] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10lug2022 15:28:27.480] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10lug2022 15:28:27.542] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10lug2022 15:28:27.971] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10lug2022 15:28:28.521] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10lug2022 15:28:29.008] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10lug2022 15:28:29.506] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10lug2022 15:28:29.979] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 4%
+[10lug2022 15:28:30.546] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 8%
+[10lug2022 15:28:30.993] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 15%
+[10lug2022 15:28:31.522] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 38%
+[10lug2022 15:28:32.018] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 55%
+[10lug2022 15:28:32.644] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[10lug2022 15:28:32.681] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 6214 ms
+[10lug2022 15:28:32.776] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[10lug2022 15:28:32.779] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[10lug2022 15:28:32.828] [Render thread/DEBUG] [io.netty.channel.MultithreadEventLoopGroup/]: -Dio.netty.eventLoopThreads: 24
+[10lug2022 15:28:32.900] [Render thread/DEBUG] [io.netty.channel.nio.NioEventLoop/]: -Dio.netty.noKeySetOptimization: false
+[10lug2022 15:28:32.901] [Render thread/DEBUG] [io.netty.channel.nio.NioEventLoop/]: -Dio.netty.selectorAutoRebuildThreshold: 512
+[10lug2022 15:28:32.917] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: org.jctools-core.MpscChunkedArrayQueue: available
+[10lug2022 15:28:33.022] [Render thread/DEBUG] [io.netty.channel.DefaultChannelId/]: -Dio.netty.processId: 10308 (auto-detected)
+[10lug2022 15:28:33.027] [Render thread/DEBUG] [io.netty.util.NetUtil/]: -Djava.net.preferIPv4Stack: false
+[10lug2022 15:28:33.028] [Render thread/DEBUG] [io.netty.util.NetUtil/]: -Djava.net.preferIPv6Addresses: false
+[10lug2022 15:28:33.052] [Render thread/DEBUG] [io.netty.util.NetUtilInitializations/]: Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[10lug2022 15:28:33.055] [Render thread/DEBUG] [io.netty.util.NetUtil/]: Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+[10lug2022 15:28:33.125] [Render thread/DEBUG] [io.netty.channel.DefaultChannelId/]: -Dio.netty.machineId: 70:9c:d1:ff:fe:47:62:65 (auto-detected)
+[10lug2022 15:28:33.193] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numHeapArenas: 24
+[10lug2022 15:28:33.194] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numDirectArenas: 24
+[10lug2022 15:28:33.195] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.pageSize: 8192
+[10lug2022 15:28:33.195] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxOrder: 11
+[10lug2022 15:28:33.196] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.chunkSize: 16777216
+[10lug2022 15:28:33.196] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.smallCacheSize: 256
+[10lug2022 15:28:33.197] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.normalCacheSize: 64
+[10lug2022 15:28:33.198] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[10lug2022 15:28:33.198] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimInterval: 8192
+[10lug2022 15:28:33.199] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[10lug2022 15:28:33.200] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.useCacheForAllThreads: true
+[10lug2022 15:28:33.200] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[10lug2022 15:28:33.229] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.allocator.type: pooled
+[10lug2022 15:28:33.230] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.threadLocalDirectBufferSize: 0
+[10lug2022 15:28:33.231] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[10lug2022 15:28:33.312] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Starting local connection.
+[10lug2022 15:28:33.635] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.maxCapacityPerThread: 4096
+[10lug2022 15:28:33.639] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.maxSharedCapacityFactor: 2
+[10lug2022 15:28:33.640] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.linkCapacity: 16
+[10lug2022 15:28:33.643] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.ratio: 8
+[10lug2022 15:28:33.644] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.delayedQueue.ratio: 8
+[10lug2022 15:28:33.695] [Netty Server IO #1/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkAccessible: true
+[10lug2022 15:28:33.699] [Netty Server IO #1/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkBounds: true
+[10lug2022 15:28:33.703] [Netty Server IO #1/DEBUG] [io.netty.util.ResourceLeakDetectorFactory/]: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@486447df
+[10lug2022 15:28:33.713] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Starting local connection.
+[10lug2022 15:28:34.930] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'net.minecraftforge.network.HandshakeMessages$S2CModList' to 'fml:handshake' sequence 0
+[10lug2022 15:28:34.945] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 0
+[10lug2022 15:28:34.950] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Logging into server with mod list [minecraft, rpg_exp_mg, forge]
+[10lug2022 15:28:34.953] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:loginwrapper' : Version test of 'FML2' from server : ACCEPTED
+[10lug2022 15:28:34.954] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:tier_sorting' : Version test of '1.0' from server : ACCEPTED
+[10lug2022 15:28:34.954] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:handshake' : Version test of 'FML2' from server : ACCEPTED
+[10lug2022 15:28:34.955] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:unregister' : Version test of 'FML2' from server : ACCEPTED
+[10lug2022 15:28:34.957] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:play' : Version test of 'FML2' from server : ACCEPTED
+[10lug2022 15:28:34.958] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:register' : Version test of 'FML2' from server : ACCEPTED
+[10lug2022 15:28:34.958] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:split' : Version test of '1.1' from server : ACCEPTED
+[10lug2022 15:28:34.959] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Accepting channel list from server
+[10lug2022 15:28:34.961] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Dispatching wrapped packet reply for channel fml:handshake with index 0
+[10lug2022 15:28:34.962] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Accepted server connection
+[10lug2022 15:28:34.963] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 0
+[10lug2022 15:28:34.964] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client indexed reply 0 of type net.minecraftforge.network.HandshakeMessages$C2SModListReply
+[10lug2022 15:28:34.965] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client connection with modlist [minecraft, rpg_exp_mg, forge]
+[10lug2022 15:28:34.966] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:loginwrapper' : Version test of 'FML2' from client : ACCEPTED
+[10lug2022 15:28:34.967] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:tier_sorting' : Version test of '1.0' from client : ACCEPTED
+[10lug2022 15:28:34.967] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:handshake' : Version test of 'FML2' from client : ACCEPTED
+[10lug2022 15:28:34.968] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:unregister' : Version test of 'FML2' from client : ACCEPTED
+[10lug2022 15:28:34.969] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:play' : Version test of 'FML2' from client : ACCEPTED
+[10lug2022 15:28:34.969] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:register' : Version test of 'FML2' from client : ACCEPTED
+[10lug2022 15:28:34.970] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:split' : Version test of '1.1' from client : ACCEPTED
+[10lug2022 15:28:34.970] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Accepting channel list from client
+[10lug2022 15:28:34.971] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Accepted client connection mod list
+[10lug2022 15:28:35.004] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'Config forge-server.toml' to 'fml:handshake' sequence 1
+[10lug2022 15:28:35.006] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 1
+[10lug2022 15:28:35.007] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received config sync from server
+[10lug2022 15:28:35.008] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Dispatching wrapped packet reply for channel fml:handshake with index 1
+[10lug2022 15:28:35.009] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 1
+[10lug2022 15:28:35.010] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client indexed reply 1 of type net.minecraftforge.network.HandshakeMessages$C2SAcknowledge
+[10lug2022 15:28:35.011] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received acknowledgement from client
+[10lug2022 15:28:35.051] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Handshake complete!
+[10lug2022 15:28:35.096] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[10lug2022 15:28:35.175] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@5a1f2376
+[10lug2022 15:28:35.210] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:ae9975b1] logged in with entity id 97 at (523.0154219573016, 63.0, -904.0)
+[10lug2022 15:28:35.285] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[10lug2022 15:28:37.282] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 2187ms or 43 ticks behind
+[10lug2022 15:28:37.317] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 8 advancements
+[10lug2022 15:29:11.227] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Unable to play empty soundEvent: minecraft:entity.salmon.ambient
+[10lug2022 15:29:34.096] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[10lug2022 15:29:34.125] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[10lug2022 15:29:34.193] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[10lug2022 15:29:34.393] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[10lug2022 15:29:34.426] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: Gathering id map for writing to world save New World
+[10lug2022 15:29:34.451] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: ID Map collection complete New World
+[10lug2022 15:29:34.830] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[10lug2022 15:29:34.831] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[10lug2022 15:29:34.859] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[10lug2022 15:29:34.913] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[10lug2022 15:29:34.915] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[10lug2022 15:29:34.917] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds

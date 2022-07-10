@@ -7,6 +7,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 
 import com.noir.rpg_exp_mg.spell.preset.Teleport;
@@ -17,17 +18,16 @@ import com.noir.rpg_exp_mg.items.ISpell;
 public class ArcaneTeleport implements ISpell {
 
     private ISpell spell;
-    private ISpell nextSpell;
 
     public ArcaneTeleport() {
 
         this.spell = new ArcaneInstantTeleport();
-        this.nextSpell = new ArcaneChargeTeleport();
+
     }
 
     @Override
-    public void releaseUsing(ItemStack itemstaks, Level world, LivingEntity entity, int i) {
-        spell.releaseUsing(itemstaks, world, entity, i);
+    public void releaseUsing(ItemStack itemstaks, Level world, LivingEntity entity, int time) {
+        spell.releaseUsing(itemstaks, world, entity, time);
 
     }
 
@@ -37,15 +37,23 @@ public class ArcaneTeleport implements ISpell {
         return spell.use(world, player, hand);
     }
 
-    public static void exe(Level world, Player player, Item item) {
+    @Override
+    public UseAnim getUseAnimation(ItemStack itemStack) {
+        return spell.getUseAnimation(itemStack);
+    }
 
-        Teleport tp = new Teleport(world, player, 50);
-        if (tp.run()) {
+    public static boolean exe(Level world, Player player, Item item) {
 
-            Sound.playSound(world, player, SoundEvents.ENDERMAN_TELEPORT);
-            CoolDown.addCoolDown(player, item, 5);
+        if (!player.getCooldowns().isOnCooldown(item)) {
+            Teleport tp = new Teleport(world, player, 50);
+            if (tp.run()) {
+                CoolDown.addCoolDown(player, item, 50);
+                Sound.playSound(world, player, SoundEvents.ENDERMAN_TELEPORT);
 
+                return true;
+            }
         }
+        return false;
     }
 
     public ISpell getSpell() {
@@ -56,21 +64,22 @@ public class ArcaneTeleport implements ISpell {
         this.spell = spell;
     }
 
-    public ISpell getNextSpell() {
-        return this.nextSpell;
-    }
-
-    public void setNextSpell(ISpell nextSpell) {
-        this.nextSpell = nextSpell;
-    }
-
     public class ArcaneInstantTeleport implements ISpell {
+
+        private ArcaneChargeTeleport nextSpell() {
+            return new ArcaneChargeTeleport();
+        }
 
         public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
 
-            exe(world, player, player.getItemInHand(hand).getItem());
-            setSpell(getNextSpell());
-            setNextSpell(new ArcaneInstantTeleport());
+            System.out.println("Instant");
+            if (exe(world, player, player.getItemInHand(hand).getItem())) {
+                System.out.println("Change spell");
+
+                setSpell(nextSpell());
+
+                System.out.println("Spell is Charge: " + (getSpell() instanceof ArcaneChargeTeleport));
+            }
             return defaultuse(world, player, hand);
 
         }
@@ -81,27 +90,52 @@ public class ArcaneTeleport implements ISpell {
 
         }
 
+        @Override
+        public UseAnim getUseAnimation(ItemStack itemStack) {
+            return UseAnim.EAT;
+        }
+
     }
 
     public class ArcaneChargeTeleport implements ISpell {
 
+        private ArcaneInstantTeleport nextSpell() {
+            return new ArcaneInstantTeleport();
+        }
+
         @Override
-        public void releaseUsing(ItemStack itemstaks, Level world, LivingEntity entity, int i) {
+        public void releaseUsing(ItemStack itemstaks, Level world, LivingEntity entity, int time) {
+
+            System.out.println("Hold relese Use");
+            int i = itemstaks.getItem().getUseDuration(itemstaks) - time;
+            System.out.println(i);
+            if (i < 50)
+                return;
+
             if (entity instanceof Player) {
-                exe(world, (Player) entity, itemstaks.getItem());
-                setSpell(getNextSpell());
-                setNextSpell(new ArcaneChargeTeleport());
+                System.out.println("Hold");
+                if (exe(world, (Player) entity, itemstaks.getItem())) {
+                    System.out.println("Chanche hold");
+                    setSpell(nextSpell());
+                    System.out.println("Spell is instant: " + (getSpell() instanceof ArcaneInstantTeleport));
+                }
             }
 
         }
 
+        @Override
         public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
-            System.out.println("Used");
+
             ItemStack itemstack = player.getItemInHand(hand);
             player.startUsingItem(hand);
 
             return InteractionResultHolder.consume(itemstack);
 
+        }
+
+        @Override
+        public UseAnim getUseAnimation(ItemStack itemStack) {
+            return UseAnim.BOW;
         }
 
     }

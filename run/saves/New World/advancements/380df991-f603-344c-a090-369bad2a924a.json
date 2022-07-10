@@ -29,6 +29,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/cake": {
+    "criteria": {
+      "has_egg": "2022-07-10 15:16:00 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/spruce_boat": {
     "criteria": {
       "in_water": "2022-07-07 20:44:25 +0200"

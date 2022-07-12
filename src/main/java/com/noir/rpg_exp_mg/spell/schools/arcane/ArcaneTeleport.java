@@ -10,38 +10,26 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 
+import com.noir.rpg_exp_mg.spell.ASpell;
+import com.noir.rpg_exp_mg.spell.ISpell;
 import com.noir.rpg_exp_mg.spell.preset.Teleport;
 import com.noir.rpg_exp_mg.custom.tool.CoolDown;
 import com.noir.rpg_exp_mg.custom.tool.Sound;
-import com.noir.rpg_exp_mg.items.ISpell;
 
-public class ArcaneTeleport implements ISpell {
-
-    private ISpell spell;
+public class ArcaneTeleport extends ASpell {
 
     public ArcaneTeleport() {
-
-        this.spell = new ArcaneInstantTeleport();
-
+        super(null);
     }
 
-    @Override
-    public void releaseUsing(ItemStack itemstaks, Level world, LivingEntity entity, int time) {
-        spell.releaseUsing(itemstaks, world, entity, time);
-
-    }
-
-    @Override
-    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
-
-        return spell.use(world, player, hand);
-    }
-
-    @Override
-    public UseAnim getUseAnimation(ItemStack itemStack) {
-        return spell.getUseAnimation(itemStack);
-    }
-
+    /**
+     * Execute the spell
+     * 
+     * @param world
+     * @param player
+     * @param item
+     * @return
+     */
     public static boolean exe(Level world, Player player, Item item) {
 
         if (!player.getCooldowns().isOnCooldown(item)) {
@@ -56,20 +44,19 @@ public class ArcaneTeleport implements ISpell {
         return false;
     }
 
-    public ISpell getSpell() {
-        return this.spell;
+    @Override
+    public ISpell nextSpell() {
+        return new ArcaneInstantTeleport();
     }
 
-    public void setSpell(ISpell spell) {
-        this.spell = spell;
+    @Override
+    public String toString() {
+        return "Arcane Teleport";
     }
 
     public class ArcaneInstantTeleport implements ISpell {
 
-        private ArcaneChargeTeleport nextSpell() {
-            return new ArcaneChargeTeleport();
-        }
-
+        @Override
         public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
 
             System.out.println("Instant");
@@ -80,26 +67,27 @@ public class ArcaneTeleport implements ISpell {
 
                 System.out.println("Spell is Charge: " + (getSpell() instanceof ArcaneChargeTeleport));
             }
-            return defaultuse(world, player, hand);
-
-        }
-
-        @Override
-        public void releaseUsing(ItemStack itemstaks, Level world, LivingEntity entity, int i) {
-            // TODO Auto-generated method stub
+            return useDefaultInstant(world, player, hand);
 
         }
 
         @Override
         public UseAnim getUseAnimation(ItemStack itemStack) {
-            return UseAnim.EAT;
+            return UseAnim.NONE;
+        }
+
+        @Override
+        public ISpell nextSpell() {
+
+            return new ArcaneChargeTeleport();
         }
 
     }
 
     public class ArcaneChargeTeleport implements ISpell {
 
-        private ArcaneInstantTeleport nextSpell() {
+        @Override
+        public ArcaneInstantTeleport nextSpell() {
             return new ArcaneInstantTeleport();
         }
 

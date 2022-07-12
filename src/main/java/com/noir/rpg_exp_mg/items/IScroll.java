@@ -1,5 +1,6 @@
 package com.noir.rpg_exp_mg.items;
 
+import com.noir.rpg_exp_mg.spell.ISpell;
 import com.noir.rpg_exp_mg.spell.schools.arcane.ArcaneTeleport;
 
 import net.minecraft.world.InteractionHand;
@@ -11,7 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 
-public class IScroll extends BowItem implements ISpell {
+public class IScroll extends BowItem {
 
     private ISpell spell;
 

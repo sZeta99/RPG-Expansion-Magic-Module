@@ -1,7 +1,6 @@
 package com.noir.rpg_exp_mg.spell;
 
 import com.noir.rpg_exp_mg.spell.schools.ISchool;
-
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
@@ -92,15 +91,30 @@ public abstract class ASpell implements ISpell {
     }
 
     /**
-     * This function will change the spell tu the next one.
+     * This function will change the spell to the next one.
      * 
      * 
      * @return The next spell in the Graph of spell
      */
     public void changeSpell() {
 
-        setSpell(nextSpell());
+        setSpell(spell.nextSpell());
 
     }
+
+    /**
+     * Parte di un interfaccia atta ad unificare spell e subSpell
+     */
+    @Override
+    public ISpell nextSpell() {
+
+        return startingSpell();
+    }
+
+    /**
+     * 
+     * @return The first subSpell of the spell
+     */
+    public abstract ISpell startingSpell();
 
 }

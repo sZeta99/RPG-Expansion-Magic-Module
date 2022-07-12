@@ -22,6 +22,12 @@ public class ArcaneTeleport extends ASpell {
         super(null);
     }
 
+    @Override
+    public ISpell startingSpell() {
+
+        return new ArcaneInstantTeleport();
+    }
+
     /**
      * Execute the spell
      * 
@@ -42,11 +48,6 @@ public class ArcaneTeleport extends ASpell {
             }
         }
         return false;
-    }
-
-    @Override
-    public ISpell nextSpell() {
-        return new ArcaneInstantTeleport();
     }
 
     @Override

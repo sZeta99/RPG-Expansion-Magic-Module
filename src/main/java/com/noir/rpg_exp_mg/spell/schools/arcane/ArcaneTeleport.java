@@ -19,7 +19,7 @@ import com.noir.rpg_exp_mg.custom.tool.Sound;
 public class ArcaneTeleport extends ASpell {
 
     public ArcaneTeleport() {
-        super(null);
+        super(new SchoolArcane());
     }
 
     @Override

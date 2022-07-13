@@ -94,7 +94,7 @@ public abstract class ASpell implements ISpell {
      * This function will change the spell to the next one.
      * 
      * 
-     * @return The next spell in the Graph of spell
+     * @return
      */
     public void changeSpell() {
 

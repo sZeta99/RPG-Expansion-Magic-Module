@@ -1,7 +1,7 @@
 package com.noir.rpg_exp_mg.items;
 
 import com.noir.rpg_exp_mg.spell.ISpell;
-import com.noir.rpg_exp_mg.spell.schools.arcane.ArcaneTeleport;
+import com.noir.rpg_exp_mg.spell.schools.arcane.spells.ArcaneTeleport;
 
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -25,21 +25,19 @@ public class IScroll extends BowItem {
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
 
-        System.out.println("GeneralUse");
         return spell.use(world, player, hand);
     }
 
     @Override
     public void releaseUsing(ItemStack itemstaks, Level world, LivingEntity entity, int i) {
 
-        System.out.println("General Relese Use");
         spell.releaseUsing(itemstaks, world, entity, i);
 
     }
 
     @Override
     public UseAnim getUseAnimation(ItemStack itemStack) {
-        System.out.println("Call General anim");
+
         return spell.getUseAnimation(itemStack);
     }
 

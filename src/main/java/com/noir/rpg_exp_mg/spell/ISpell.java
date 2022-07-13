@@ -11,7 +11,7 @@ import net.minecraft.world.level.Level;
 public interface ISpell {
 
     /**
-     * Put the logic here for instant use on left click
+     * Method call on left click
      * 
      * @param world
      * @param player
@@ -19,6 +19,8 @@ public interface ISpell {
      * @return
      */
     public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand);
+
+    public void using(Level world, Player player, InteractionHand hand);
 
     /**
      * Put the logic here for use un relese charge
@@ -29,8 +31,7 @@ public interface ISpell {
      * @param time
      */
 
-    public default void releaseUsing(ItemStack itemstaks, Level world, LivingEntity entity, int time) {
-    }
+    public void releaseUsing(ItemStack itemstaks, Level world, LivingEntity entity, int time);
 
     /**
      * Override to change tipe of animention on left click
@@ -50,28 +51,10 @@ public interface ISpell {
      * @param hand
      * @return
      */
-    public default InteractionResultHolder<ItemStack> useDefaultInstant(Level world, Player player,
+    public default InteractionResultHolder<ItemStack> useDefault(Player player,
             InteractionHand hand) {
 
-        return InteractionResultHolder.pass(player.getItemInHand(hand));
-    }
-
-    /**
-     * Tell the game that it must use the relese using function
-     * 
-     * @param world
-     * @param player
-     * @param hand
-     * @return
-     */
-    public default InteractionResultHolder<ItemStack> useDefaultCharge(Level world, Player player,
-            InteractionHand hand) {
-
-        ItemStack itemstack = player.getItemInHand(hand);
-        player.startUsingItem(hand);
-
-        return InteractionResultHolder.consume(itemstack);
-
+        return InteractionResultHolder.consume(player.getItemInHand(hand));
     }
 
     /**

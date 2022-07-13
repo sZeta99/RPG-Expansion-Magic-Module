@@ -4,11 +4,11 @@ import com.noir.rpg_exp_mg.spell.schools.ISchool;
 
 import java.awt.Color;
 
-final class SchoolArcane implements ISchool {
+public final class SchoolArcane implements ISchool {
 
-    private static String name;
-    private static String description;
-    private static Color color;
+    private String name;
+    private String description;
+    private Color color;
 
     public SchoolArcane() {
         this("Arcane",
@@ -17,9 +17,9 @@ final class SchoolArcane implements ISchool {
     }
 
     private SchoolArcane(String name, String description, Color color) {
-        SchoolArcane.name = name;
-        SchoolArcane.description = description;
-        SchoolArcane.color = color;
+        this.name = name;
+        this.description = description;
+        this.color = color;
     }
 
     @Override

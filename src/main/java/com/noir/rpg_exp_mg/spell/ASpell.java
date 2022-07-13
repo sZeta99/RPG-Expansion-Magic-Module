@@ -29,6 +29,11 @@ public abstract class ASpell implements ISpell {
 
     }
 
+    @Override
+    public void using(Level world, Player player, InteractionHand hand) {
+
+    }
+
     /**
      * Function call the omunimus method in spell
      * 

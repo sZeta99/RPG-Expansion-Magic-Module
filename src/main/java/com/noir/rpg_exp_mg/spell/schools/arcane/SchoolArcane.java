@@ -14,6 +14,7 @@ public final class SchoolArcane implements ISchool {
         this("Arcane",
                 "Ancient magic losy in time",
                 Color.GRAY);
+
     }
 
     private SchoolArcane(String name, String description, Color color) {

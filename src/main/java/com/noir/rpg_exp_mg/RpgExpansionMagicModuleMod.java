@@ -21,8 +21,6 @@ public class RpgExpansionMagicModuleMod {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(eventBus);
 
-        MinecraftForge.EVENT_BUS.register(new MyCapability());
-        MinecraftForge.EVENT_BUS.register(new ManaAttacher());
     }
 
     /*

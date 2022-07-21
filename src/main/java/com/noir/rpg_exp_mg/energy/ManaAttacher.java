@@ -11,16 +11,20 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.INBTSerializable;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 
+@Mod.EventBusSubscriber(modid = RpgExpansionMagicModuleMod.MOD_ID, bus = Bus.FORGE, value = Dist.CLIENT)
 public class ManaAttacher {
 
-    private static class ManaProvider implements ICapabilityProvider, INBTSerializable<CompoundTag> {
+    public class ManaProvider implements ICapabilityProvider, INBTSerializable<CompoundTag> {
 
         public static final ResourceLocation IDENTIFIER = new ResourceLocation(RpgExpansionMagicModuleMod.MOD_ID,
                 "myCap");
@@ -53,11 +57,13 @@ public class ManaAttacher {
 
     @SubscribeEvent
     public static void attach(final AttachCapabilitiesEvent<Entity> event) {
+        System.out.println("attach called");
         if (event.getObject() instanceof Player) {
-            final ManaProvider provider = new ManaProvider();
+            // ManaProvider provider = (new ManaAttacher()).new ManaProvider();
+            System.out.println("attach called ON pLAYER");
 
-            event.addCapability(ManaProvider.IDENTIFIER, provider);
-            System.out.println("Capability Attached : " + ManaProvider.IDENTIFIER);
+            // event.addCapability(ManaProvider.IDENTIFIER, manaProvider);
+            // System.out.println("Capability Attached : " + ManaProvider.IDENTIFIER);
         }
     }
 

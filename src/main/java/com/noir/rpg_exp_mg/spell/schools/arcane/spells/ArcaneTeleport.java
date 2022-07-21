@@ -10,14 +10,21 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.common.capabilities.CapabilityManager;
+import net.minecraftforge.common.util.LazyOptional;
 
 import com.noir.rpg_exp_mg.spell.ASpell;
 import com.noir.rpg_exp_mg.spell.ISpell;
 import com.noir.rpg_exp_mg.spell.preset.Teleport;
 import com.noir.rpg_exp_mg.spell.type.ASpellTypeInstant;
 import com.noir.rpg_exp_mg.spell.type.ASpellTypeRelese;
+
+import org.lwjgl.system.CallbackI.S;
+
 import com.noir.rpg_exp_mg.custom.tool.CoolDown;
 import com.noir.rpg_exp_mg.custom.tool.Sound;
+import com.noir.rpg_exp_mg.energy.EnergyInterface;
+import com.noir.rpg_exp_mg.energy.MyCapability;
 
 public class ArcaneTeleport extends ASpell {
 
@@ -40,6 +47,12 @@ public class ArcaneTeleport extends ASpell {
      * @return
      */
     public static boolean exe(Level world, Player player, Item item) {
+
+        LazyOptional<EnergyInterface> myCapability = player.getCapability(MyCapability.INSTANCE);
+
+        // if (myCapability.isPresent())
+        System.out.println("Exiting : " + myCapability.isPresent());
+        System.out.println("---------------- " + MyCapability.INSTANCE.isRegistered());
 
         if (!player.getCooldowns().isOnCooldown(item)) {
             Teleport tp = new Teleport(world, player, 50);

@@ -12,6 +12,14 @@ buildscript {
 plugins {
     id 'eclipse'
     id 'maven-publish'
+    id "org.sonarqube" version "3.4.0.2513"
+
+}
+
+sonarqube {
+    properties {
+        property 'sonar.projectName', 'RPG-Expansion-Magic-Module'
+    }
 }
 apply plugin: 'net.minecraftforge.gradle'
 

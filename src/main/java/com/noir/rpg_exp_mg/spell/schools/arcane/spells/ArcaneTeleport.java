@@ -4,13 +4,13 @@ import com.noir.rpg_exp_mg.spell.schools.arcane.SchoolArcane;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.util.LazyOptional;
 
 import com.noir.rpg_exp_mg.spell.ASpell;
@@ -18,8 +18,6 @@ import com.noir.rpg_exp_mg.spell.ISpell;
 import com.noir.rpg_exp_mg.spell.preset.Teleport;
 import com.noir.rpg_exp_mg.spell.type.ASpellTypeInstant;
 import com.noir.rpg_exp_mg.spell.type.ASpellTypeRelese;
-
-import org.lwjgl.system.CallbackI.S;
 
 import com.noir.rpg_exp_mg.custom.tool.CoolDown;
 import com.noir.rpg_exp_mg.custom.tool.Sound;
@@ -47,14 +45,13 @@ public class ArcaneTeleport extends ASpell {
      * @return
      */
     public static boolean exe(Level world, Player player, Item item) {
-
-        LazyOptional<EnergyInterface> myCapability = player.getCapability(MyCapability.INSTANCE);
-
-        // if (myCapability.isPresent())
-        System.out.println("Exiting : " + myCapability.isPresent());
-        System.out.println("---------------- " + MyCapability.INSTANCE.isRegistered());
-
         if (!player.getCooldowns().isOnCooldown(item)) {
+            LazyOptional<EnergyInterface> myCapability = player.getCapability(MyCapability.INSTANCE);
+
+            // if (myCapability.isPresent())
+            System.out.println("Exiting : " + myCapability.isPresent());
+            System.out.println("---------------- " + MyCapability.INSTANCE.isRegistered());
+
             Teleport tp = new Teleport(world, player, 50);
             if (tp.run()) {
                 CoolDown.addCoolDown(player, item, 50);
@@ -79,7 +76,6 @@ public class ArcaneTeleport extends ASpell {
             return new ArcaneChargeTeleport();
         }
 
-        @Override
         public void using(Level world, Player player, InteractionHand hand) {
 
             System.out.println("Instant");
@@ -90,6 +86,18 @@ public class ArcaneTeleport extends ASpell {
 
                 System.out.println("Spell is Charge: " + (getSpell() instanceof ArcaneChargeTeleport));
             }
+
+        }
+
+        @Override
+        public InteractionResultHolder<ItemStack> whenUsing(Level world, Player player, InteractionHand hand) {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public void whileUsing(Level world, Player player, InteractionHand hand) {
+            // TODO Auto-generated method stub
 
         }
 
@@ -126,6 +134,30 @@ public class ArcaneTeleport extends ASpell {
         public UseAnim getUseAnimation(ItemStack itemStack) {
             return UseAnim.BOW;
         }
+
+        @Override
+        public InteractionResultHolder<ItemStack> whenUsing(Level world, Player player, InteractionHand hand) {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public void whileUsing(Level world, Player player, InteractionHand hand) {
+            // TODO Auto-generated method stub
+
+        }
+
+    }
+
+    @Override
+    public InteractionResultHolder<ItemStack> whenUsing(Level world, Player player, InteractionHand hand) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public void whileUsing(Level world, Player player, InteractionHand hand) {
+        // TODO Auto-generated method stub
 
     }
 

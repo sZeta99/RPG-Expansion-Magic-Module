@@ -57,7 +57,7 @@ public class ManaAttacher {
 
     @SubscribeEvent
     public static void attach(final AttachCapabilitiesEvent<Entity> event) {
-        System.out.println("attach called");
+        // System.out.println("attach called");
         if (event.getObject() instanceof Player) {
             // ManaProvider provider = (new ManaAttacher()).new ManaProvider();
             System.out.println("attach called ON pLAYER");

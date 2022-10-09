@@ -18,9 +18,9 @@ public interface ISpell {
      * @param hand
      * @return
      */
-    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand);
+    public InteractionResultHolder<ItemStack> whenUsing(Level world, Player player, InteractionHand hand);
 
-    public void using(Level world, Player player, InteractionHand hand);
+    public void whileUsing(Level world, Player player, InteractionHand hand);
 
     /**
      * Put the logic here for use un relese charge

@@ -29,11 +29,6 @@ public abstract class ASpell implements ISpell {
 
     }
 
-    @Override
-    public void using(Level world, Player player, InteractionHand hand) {
-
-    }
-
     /**
      * Function call the omunimus method in spell
      * 
@@ -56,11 +51,14 @@ public abstract class ASpell implements ISpell {
      * @param hand
      * @return
      */
-    @Override
-    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
 
-        return spell.use(world, player, hand);
-    }
+    /*
+     * public InteractionResultHolder<ItemStack> use(Level world, Player player,
+     * InteractionHand hand) {
+     * 
+     * return spell.use(world, player, hand);
+     * }
+     */
 
     /**
      * Function call the omunimus method in spell

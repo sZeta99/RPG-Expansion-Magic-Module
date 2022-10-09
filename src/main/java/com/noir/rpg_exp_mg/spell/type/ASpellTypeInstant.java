@@ -16,11 +16,4 @@ public abstract class ASpellTypeInstant implements ISpell {
 
     }
 
-    @Override
-    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
-        using(world, player, hand);
-
-        return useDefault(player, hand);
-    }
-
 }

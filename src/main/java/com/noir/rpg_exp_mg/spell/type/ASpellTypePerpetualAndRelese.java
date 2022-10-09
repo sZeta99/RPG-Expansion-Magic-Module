@@ -10,11 +10,4 @@ import net.minecraft.world.level.Level;
 
 public abstract class ASpellTypePerpetualAndRelese implements ISpell {
 
-    @Override
-    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
-        using(world, player, hand);
-        player.startUsingItem(hand);
-        return useDefault(player, hand);
-    }
-
 }

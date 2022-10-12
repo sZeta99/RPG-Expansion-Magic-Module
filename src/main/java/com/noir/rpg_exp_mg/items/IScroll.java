@@ -1,50 +1,22 @@
 package com.noir.rpg_exp_mg.items;
 
-import io.netty.handler.codec.socksx.v4.Socks4CommandRequest;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
+import com.noir.rpg_exp_mg.spell.ASpell;
+import com.noir.rpg_exp_mg.spell.ISpell;
 
-public class IScroll extends Item {
+public class IScroll extends ASpell {
 
-    // private ISpell spell;
-
-    // considerare static factory method
-    public IScroll(Properties p_41383_) {
-        super(p_41383_);
-        System.out.println("Construct");
-        // this.spell = new ArcaneTeleport();
+    // static factory method
+    public static IScroll createScroll(ISpell spell) {
+        return new IScroll(new Properties(), spell);
     }
 
-    public void releaseUsing(ItemStack p_40667_, Level p_40668_, LivingEntity p_40669_, int p_40670_) {
-        System.out.println("--------------Relese-----------------");
-        if (p_40669_ instanceof Player) {
-            Player player = (Player) p_40669_;
-
-            int i = this.getUseDuration(p_40667_) - p_40670_;
-            i = net.minecraftforge.event.ForgeEventFactory.onArrowLoose(p_40667_, p_40668_, player, i,
-                    true);
-            if (i < 0)
-                return;
-
-        }
+    public IScroll(Properties properties, ISpell spell) {
+        super(properties, spell);
     }
 
-    // Fondamentale per usare relese
-    public int getUseDuration(ItemStack p_40680_) {
-        return 72000;
-    }
-
-    public InteractionResultHolder<ItemStack> use(Level p_40672_, Player p_40673_, InteractionHand p_40674_) {
-        ItemStack itemstack = p_40673_.getItemInHand(p_40674_);
-
-        p_40673_.startUsingItem(p_40674_);
-        return InteractionResultHolder.consume(itemstack);
-
+    // Costruttore per il bus
+    public IScroll(Properties properties) {
+        super(properties, null);
     }
 
 }

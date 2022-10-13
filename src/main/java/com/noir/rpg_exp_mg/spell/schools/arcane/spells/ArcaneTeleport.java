@@ -27,6 +27,7 @@ public class ArcaneTeleport implements ISpell {
 
     // Vedere se si può astrearre
     enum State {
+
         MAGIARITORNO(new ArcaneTeleport());
 
         private ISpell spell;

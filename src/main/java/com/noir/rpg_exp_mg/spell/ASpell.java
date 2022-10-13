@@ -13,6 +13,7 @@ import net.minecraft.world.level.Level;
 //Classe può essere spezzata ulteriormente
 public abstract class ASpell extends Item implements ISpell {
 
+    // Predisporre una NULL Spell
     private ISpell spell;
 
     /**

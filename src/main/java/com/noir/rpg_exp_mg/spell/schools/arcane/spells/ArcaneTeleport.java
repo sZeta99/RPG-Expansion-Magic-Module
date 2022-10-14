@@ -1,53 +1,29 @@
 package com.noir.rpg_exp_mg.spell.schools.arcane.spells;
 
-import com.noir.rpg_exp_mg.spell.schools.arcane.SchoolArcane;
-
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-
-import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.util.LazyOptional;
-
-import com.noir.rpg_exp_mg.spell.ISpell;
+import com.noir.rpg_exp_mg.spell.ASpell;
 import com.noir.rpg_exp_mg.spell.preset.Teleport;
-
 import com.noir.rpg_exp_mg.custom.tool.CoolDown;
 import com.noir.rpg_exp_mg.custom.tool.Sound;
-import com.noir.rpg_exp_mg.energy.EnergyInterface;
-import com.noir.rpg_exp_mg.energy.MyCapability;
 
-public class ArcaneTeleport implements ISpell {
+//test class with teleport
+public class ArcaneTeleport extends ASpell {
 
-    // Vedere se si può astrearre
-    enum State {
+    // keep in mind enum for simil state machine
 
-        MAGIARITORNO(new ArcaneTeleport());
+    // static factory method
 
-        private ISpell spell;
-
-        State(ISpell spell) {
-            this.spell = spell;
-        }
-
-        public ISpell getSpell() {
-            return spell;
-        }
-
-    }
-
-    public ArcaneTeleport() {
-
+    // comstructor
+    public ArcaneTeleport(Properties properties) {
+        super(properties);
+        nextSpell(new ArcaneTeleportInstant(this));
     }
 
     /**
-     * Execute the spell
+     * Execute the spell must return true if the spell is executed else false
      * 
      * @param world
      * @param player
@@ -56,11 +32,13 @@ public class ArcaneTeleport implements ISpell {
      */
     public static boolean exe(Level world, Player player, Item item) {
         if (!player.getCooldowns().isOnCooldown(item)) {
-            LazyOptional<EnergyInterface> myCapability = player.getCapability(MyCapability.INSTANCE);
+            // LazyOptional<EnergyInterface> myCapability =
+            // player.getCapability(MyCapability.INSTANCE);
 
             // if (myCapability.isPresent())
-            System.out.println("Exiting : " + myCapability.isPresent());
-            System.out.println("---------------- " + MyCapability.INSTANCE.isRegistered());
+            // System.out.println("Exiting : " + myCapability.isPresent());
+            // System.out.println("---------------- " +
+            // MyCapability.INSTANCE.isRegistered());
 
             Teleport tp = new Teleport(world, player, 50);
             if (tp.run()) {
@@ -71,37 +49,6 @@ public class ArcaneTeleport implements ISpell {
             }
         }
         return false;
-    }
-
-    @Override
-    public ISpell nextSpell() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public InteractionResultHolder<ItemStack> onUse(ItemStack itemStack, Level level, Player player,
-            InteractionHand hand) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public boolean onUseOnRelease(ItemStack itemStack) {
-        // TODO Auto-generated method stub
-        return false;
-    }
-
-    @Override
-    public InteractionResult onUseOn(UseOnContext context) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public void onUseOnRelease(ItemStack itemStack, Level level, Player player, int time) {
-        // TODO Auto-generated method stub
-
     }
 
 }

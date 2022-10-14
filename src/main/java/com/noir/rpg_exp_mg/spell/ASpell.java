@@ -26,6 +26,11 @@ public abstract class ASpell extends Item implements ISpell {
         this.spell = spell;
     }
 
+    public ASpell(Properties properties) {
+        super(properties);
+        this.spell = null;
+    }
+
     @Override
     public void releaseUsing(ItemStack stack, Level level, LivingEntity entity, int time) {
         System.out.println("--------------Relese-----------------");
@@ -40,7 +45,7 @@ public abstract class ASpell extends Item implements ISpell {
                 return;
 
             // Uso di un metodo come interfaccia
-            onUseOnRelease(stack, level, player, time);
+            onRelease(stack, level, player, time);
         }
 
     }
@@ -76,15 +81,6 @@ public abstract class ASpell extends Item implements ISpell {
 
     }
 
-    // Seguono i metodi interfaccia per la creazionie di una spell
-    // Bosigna inserire una metotologia per passare questi parametri prendendoli da
-    // una spell
-    @Override
-    public ISpell nextSpell() {
-
-        return spell.nextSpell();
-    }
-
     @Override
     public InteractionResultHolder<ItemStack> onUse(ItemStack itemStack, Level level, Player player,
             InteractionHand hand) {
@@ -104,10 +100,14 @@ public abstract class ASpell extends Item implements ISpell {
         return spell.onUseOnRelease(itemStack);
     }
 
-    @Override
-    public void onUseOnRelease(ItemStack itemStack, Level level, Player player, int time) {
+    public void onRelease(ItemStack itemStack, Level level, Player player, int time) {
 
-        spell.onUseOnRelease(itemStack, level, player, time);
+        spell.onRelease(itemStack, level, player, time);
     }
 
+    // Call it with the next spell
+    public void nextSpell(ISpell nextSpell) {
+
+        spell = nextSpell;
+    }
 }

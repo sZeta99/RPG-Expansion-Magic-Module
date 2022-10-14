@@ -30,6 +30,8 @@ public class ArcaneTeleport extends ASpell {
      * @param item
      * @return
      */
+    // Controllare l'output della funzione, provare magari a spostare il tutto nelle
+    // classi membro anche se è un duplicato
     public static boolean exe(Level world, Player player, Item item) {
         if (!player.getCooldowns().isOnCooldown(item)) {
             // LazyOptional<EnergyInterface> myCapability =

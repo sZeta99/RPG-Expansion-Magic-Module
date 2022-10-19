@@ -109,5 +109,6 @@ public abstract class ASpell extends Item implements ISpell {
     public void nextSpell(ISpell nextSpell) {
 
         spell = nextSpell;
+        System.out.println("ASpell.nextSpell() -> " + spell.getClass().getSimpleName());
     }
 }

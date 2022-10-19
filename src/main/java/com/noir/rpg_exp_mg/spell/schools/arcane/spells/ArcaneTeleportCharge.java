@@ -1,5 +1,6 @@
 package com.noir.rpg_exp_mg.spell.schools.arcane.spells;
 
+import com.noir.rpg_exp_mg.custom.tool.CoolDown;
 import com.noir.rpg_exp_mg.spell.ASpell;
 import com.noir.rpg_exp_mg.spell.ISpell;
 import net.minecraft.world.InteractionHand;
@@ -40,15 +41,15 @@ public class ArcaneTeleportCharge implements ISpell {
 
     @Override
     public void onRelease(ItemStack itemStack, Level level, Player player, int time) {
-        ArcaneTeleport.exe(level, player, father);
 
-        if (ArcaneTeleport.canExe(level, player, father)) {
+        if (ArcaneTeleport.canExe(level, player, father) && time > 2000) {
             ArcaneTeleport.exe(level, player, father);
-            father.nextSpell(new ArcaneTeleportCharge(father));
+            CoolDown.addCoolDown(player, itemStack.getItem(), 50);
+            father.nextSpell(new ArcaneTeleportInstant(father));
 
-            System.out.println("ArcaneTeleportInstant.onRelese()");
+            System.out.println("ArcaneTeleportCharge.onRelese() " + time);
         } else {
-            System.out.println("ArcaneTeleportInstant.onRelese() not done");
+            System.out.println("ArcaneTeleportCharge.onRelese() not done");
         }
 
     }

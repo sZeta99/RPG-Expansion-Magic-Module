@@ -6,7 +6,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import com.noir.rpg_exp_mg.spell.ASpell;
 import com.noir.rpg_exp_mg.spell.preset.Teleport;
-import com.noir.rpg_exp_mg.custom.tool.CoolDown;
 import com.noir.rpg_exp_mg.custom.tool.Sound;
 
 //test class with teleport
@@ -44,7 +43,7 @@ public class ArcaneTeleport extends ASpell {
 
             Teleport tp = new Teleport(world, player, 50);
             if (tp.run()) {
-                CoolDown.addCoolDown(player, item, 50);
+                // CoolDown.addCoolDown(player, item, 50);
                 Sound.playSound(world, player, SoundEvents.ENDERMAN_TELEPORT);
 
                 return true;

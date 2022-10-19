@@ -33,7 +33,7 @@ public abstract class ASpell extends Item implements ISpell {
 
     @Override
     public void releaseUsing(ItemStack stack, Level level, LivingEntity entity, int time) {
-        System.out.println("--------------Relese-----------------");
+        // System.out.println("--------------Relese-----------------");
         if (entity instanceof Player) {
             Player player = (Player) entity;
 
@@ -44,8 +44,8 @@ public abstract class ASpell extends Item implements ISpell {
             if (i < 0)
                 return;
 
-            // Uso di un metodo come interfaccia
-            onRelease(stack, level, player, time);
+            System.out.println("--------------Relese-----------------");
+            spell.onRelease(stack, level, player, time);
         }
 
     }
@@ -58,7 +58,7 @@ public abstract class ASpell extends Item implements ISpell {
     @Override
     public InteractionResult useOn(UseOnContext context) {
 
-        onUseOn(context);
+        spell.onUseOn(context);
 
         return super.useOn(context);
     }
@@ -66,7 +66,7 @@ public abstract class ASpell extends Item implements ISpell {
     @Override
     public boolean useOnRelease(ItemStack stack) {
 
-        onUseOnRelease(stack);
+        spell.onUseOnRelease(stack);
         return super.useOnRelease(stack);
     }
 
@@ -74,7 +74,7 @@ public abstract class ASpell extends Item implements ISpell {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack itemstack = player.getItemInHand(hand);
 
-        onUse(itemstack, level, player, hand);
+        spell.onUse(itemstack, level, player, hand);
 
         player.startUsingItem(hand);
         return InteractionResultHolder.consume(itemstack);

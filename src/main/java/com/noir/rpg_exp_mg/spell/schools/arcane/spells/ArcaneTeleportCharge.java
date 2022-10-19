@@ -42,10 +42,13 @@ public class ArcaneTeleportCharge implements ISpell {
     public void onRelease(ItemStack itemStack, Level level, Player player, int time) {
         ArcaneTeleport.exe(level, player, father);
 
-        if (ArcaneTeleport.exe(level, player, father)) {
-            father.nextSpell(new ArcaneTeleportInstant(father));
+        if (ArcaneTeleport.canExe(level, player, father)) {
+            ArcaneTeleport.exe(level, player, father);
+            father.nextSpell(new ArcaneTeleportCharge(father));
 
-            System.out.println("ArcaneTeleportCharge.onRelease()");
+            System.out.println("ArcaneTeleportInstant.onRelese()");
+        } else {
+            System.out.println("ArcaneTeleportInstant.onRelese() not done");
         }
 
     }

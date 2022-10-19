@@ -19,13 +19,17 @@ public class ArcaneTeleportInstant implements ISpell {
 
     }
 
+    // Use a local spell to save next spelle and call next spell to chenge father
     @Override
     public InteractionResultHolder<ItemStack> onUse(ItemStack itemStack, Level level, Player player,
             InteractionHand hand) {
-        if (ArcaneTeleport.exe(level, player, father)) {
+        if (ArcaneTeleport.canExe(level, player, father)) {
+            ArcaneTeleport.exe(level, player, father);
             father.nextSpell(new ArcaneTeleportCharge(father));
 
             System.out.println("ArcaneTeleportInstant.onUse()");
+        } else {
+            System.out.println("ArcaneTeleportInstant.onUse() not done");
         }
         return null;
     }

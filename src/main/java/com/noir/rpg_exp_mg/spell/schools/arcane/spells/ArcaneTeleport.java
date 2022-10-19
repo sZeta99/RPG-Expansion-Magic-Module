@@ -33,7 +33,7 @@ public class ArcaneTeleport extends ASpell {
     // Controllare l'output della funzione, provare magari a spostare il tutto nelle
     // classi membro anche se è un duplicato
     public static boolean exe(Level world, Player player, Item item) {
-        if (!player.getCooldowns().isOnCooldown(item)) {
+        if (canExe(world, player, item)) {
             // LazyOptional<EnergyInterface> myCapability =
             // player.getCapability(MyCapability.INSTANCE);
 
@@ -51,6 +51,10 @@ public class ArcaneTeleport extends ASpell {
             }
         }
         return false;
+    }
+
+    public static boolean canExe(Level world, Player player, Item item) {
+        return !player.getCooldowns().isOnCooldown(item);
     }
 
 }

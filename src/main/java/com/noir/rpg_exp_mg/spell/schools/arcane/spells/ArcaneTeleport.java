@@ -7,6 +7,7 @@ import net.minecraft.world.level.Level;
 import com.noir.rpg_exp_mg.spell.ASpell;
 import com.noir.rpg_exp_mg.spell.preset.Teleport;
 import com.noir.rpg_exp_mg.custom.tool.Sound;
+import com.noir.rpg_exp_mg.energy.PlayerManaProvider;
 
 //test class with teleport
 public class ArcaneTeleport extends ASpell {
@@ -32,24 +33,22 @@ public class ArcaneTeleport extends ASpell {
     // Controllare l'output della funzione, provare magari a spostare il tutto nelle
     // classi membro anche se è un duplicato
     public static boolean exe(Level world, Player player, Item item) {
+        boolean result = false;
         if (canExe(world, player, item)) {
-            // LazyOptional<EnergyInterface> myCapability =
-            // player.getCapability(MyCapability.INSTANCE);
-
-            // if (myCapability.isPresent())
-            // System.out.println("Exiting : " + myCapability.isPresent());
-            // System.out.println("---------------- " +
-            // MyCapability.INSTANCE.isRegistered());
-
-            Teleport tp = new Teleport(world, player, 50);
-            if (tp.run()) {
-                // CoolDown.addCoolDown(player, item, 50);
-                Sound.playSound(world, player, SoundEvents.ENDERMAN_TELEPORT);
-
-                return true;
-            }
+        boolean capPresent = player.getCapability(PlayerManaProvider.PLAYER_MANA_CAPABILITY).isPresent();
+        if (!capPresent) {
+            System.out.println("Cap not present");
+            return false;
         }
-        return false;
+
+            player.getCapability(PlayerManaProvider.PLAYER_MANA_CAPABILITY).ifPresent(mana -> {
+                if (mana.getMana() > 0) { // Once Every 10 Seconds
+                                          // on Avg
+                    mana.subMana(1);
+                    System.out.println("Mana: " + mana.getMana());
+                }
+            });
+        return result;
     }
 
     public static boolean canExe(Level world, Player player, Item item) {

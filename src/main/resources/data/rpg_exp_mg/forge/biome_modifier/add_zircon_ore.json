@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "rpg_exp_mg:zircon_ore_placed",
+  "step": "underground_ores"
+}

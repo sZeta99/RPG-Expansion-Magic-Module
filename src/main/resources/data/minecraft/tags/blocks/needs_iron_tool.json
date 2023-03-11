@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "rpg_exp_mg:zircon_ore",
+    "rpg_exp_mg:zircon_block",
+    "rpg_exp_mg:deepslate_zircon_ore"
+  ]
+}

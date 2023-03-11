@@ -1,7 +1,14 @@
 {
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2023-03-11 18:34:06 +0100"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:eroded_badlands": "2023-03-11 17:07:58 +0100"
+      "minecraft:beach": "2023-03-11 18:33:31 +0100",
+      "minecraft:plains": "2023-03-11 18:33:24 +0100"
     },
     "done": false
   },

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "rpg_exp_mg:zircon"
+    }
+  },
+  "result": {
+    "item": "rpg_exp_mg:zircon_block"
+  }
+}

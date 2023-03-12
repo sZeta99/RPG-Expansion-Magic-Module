@@ -1,7 +1,6 @@
 package com.noir.rpg_exp_mg.block;
 
 import com.noir.rpg_exp_mg.RpgExpantionMagicModule;
-import com.noir.rpg_exp_mg.block.custom.BlueberryCropBlock;
 import com.noir.rpg_exp_mg.block.custom.JumpyBlock;
 import com.noir.rpg_exp_mg.block.custom.ZirconLampBlock;
 import com.noir.rpg_exp_mg.item.ModCreativeModeTab;
@@ -62,9 +61,6 @@ public class ModBlocks {
                                         .strength(6f).requiresCorrectToolForDrops()
                                         .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)),
                         ModCreativeModeTab.TUTORIAL_TAB);
-
-        public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
-                        () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
                         CreativeModeTab tab) {

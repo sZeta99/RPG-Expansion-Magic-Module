@@ -3,6 +3,7 @@ package com.noir.rpg_exp_mg.networking;
 import com.noir.rpg_exp_mg.RpgExpantionMagicModule;
 import com.noir.rpg_exp_mg.networking.packet.DrinkWaterC2SPacket;
 import com.noir.rpg_exp_mg.networking.packet.ExampleC2SPacket;
+import com.noir.rpg_exp_mg.networking.packet.TeleportC2SPacket;
 import com.noir.rpg_exp_mg.networking.packet.ThirstDataSyncS2CPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -41,7 +42,11 @@ public class ModMessages {
                 .encoder(DrinkWaterC2SPacket::toBytes)
                 .consumerMainThread(DrinkWaterC2SPacket::handle)
                 .add();
-
+        net.messageBuilder(TeleportC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(TeleportC2SPacket::new)
+                .encoder(TeleportC2SPacket::toBytes)
+                .consumerMainThread(TeleportC2SPacket::handle)
+                .add();
         net.messageBuilder(ThirstDataSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
                 .decoder(ThirstDataSyncS2CPacket::new)
                 .encoder(ThirstDataSyncS2CPacket::toBytes)

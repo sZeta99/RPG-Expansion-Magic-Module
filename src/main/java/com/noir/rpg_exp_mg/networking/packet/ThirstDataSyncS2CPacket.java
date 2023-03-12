@@ -1,7 +1,8 @@
 package com.noir.rpg_exp_mg.networking.packet;
 
+import com.noir.rpg_exp_mg.capability.PlayerManaProvider;
 import com.noir.rpg_exp_mg.client.ClientThirstData;
-import com.noir.rpg_exp_mg.thirst.PlayerThirstProvider;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;

@@ -1,4 +1,4 @@
-package com.noir.rpg_exp_mg.thirst;
+package com.noir.rpg_exp_mg.capability;
 
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -11,16 +11,16 @@ import net.minecraftforge.common.util.LazyOptional;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class PlayerThirstProvider implements ICapabilityProvider, INBTSerializable<CompoundTag> {
-    public static Capability<PlayerThirst> PLAYER_THIRST = CapabilityManager.get(new CapabilityToken<PlayerThirst>() {
+public class PlayerManaProvider implements ICapabilityProvider, INBTSerializable<CompoundTag> {
+    public static Capability<PlayerMana> PLAYER_MANA = CapabilityManager.get(new CapabilityToken<PlayerMana>() {
     });
 
-    private PlayerThirst thirst = null;
-    private final LazyOptional<PlayerThirst> optional = LazyOptional.of(this::createPlayerThirst);
+    private PlayerMana thirst = null;
+    private final LazyOptional<PlayerMana> optional = LazyOptional.of(this::createPlayerThirst);
 
-    private PlayerThirst createPlayerThirst() {
+    private PlayerMana createPlayerThirst() {
         if (this.thirst == null) {
-            this.thirst = new PlayerThirst();
+            this.thirst = new PlayerMana();
         }
 
         return this.thirst;
@@ -28,7 +28,7 @@ public class PlayerThirstProvider implements ICapabilityProvider, INBTSerializab
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if (cap == PLAYER_THIRST) {
+        if (cap == PLAYER_MANA) {
             return optional.cast();
         }
 

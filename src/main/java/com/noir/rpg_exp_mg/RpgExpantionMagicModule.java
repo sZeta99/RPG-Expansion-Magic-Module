@@ -4,7 +4,6 @@ import com.mojang.logging.LogUtils;
 import com.noir.rpg_exp_mg.block.ModBlocks;
 import com.noir.rpg_exp_mg.item.ModItems;
 import com.noir.rpg_exp_mg.networking.ModMessages;
-import com.noir.rpg_exp_mg.painting.ModPaintings;
 import com.noir.rpg_exp_mg.villager.ModVillagers;
 import com.noir.rpg_exp_mg.world.feature.ModConfiguredFeatures;
 import com.noir.rpg_exp_mg.world.feature.ModPlacedFeatures;
@@ -33,7 +32,6 @@ public class RpgExpantionMagicModule {
         ModBlocks.register(modEventBus);
 
         ModVillagers.register(modEventBus);
-        ModPaintings.register(modEventBus);
 
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);

@@ -1,7 +1,8 @@
 package com.noir.rpg_exp_mg.networking.packet;
 
+import com.noir.rpg_exp_mg.capability.PlayerManaProvider;
 import com.noir.rpg_exp_mg.networking.ModMessages;
-import com.noir.rpg_exp_mg.thirst.PlayerThirstProvider;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
@@ -50,21 +51,21 @@ public class DrinkWaterC2SPacket {
 
                 // increase the water level / thirst level of player
                 // Output the current thirst level
-                player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
-                    thirst.addThirst(1);
-                    player.sendSystemMessage(Component.literal("Current Thirst " + thirst.getThirst())
+                player.getCapability(PlayerManaProvider.PLAYER_MANA).ifPresent(mana -> {
+                    mana.addMana(1);
+                    player.sendSystemMessage(Component.literal("Current Thirst " + mana.getMana())
                             .withStyle(ChatFormatting.AQUA));
-                    ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), player);
+                    ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(mana.getMana()), player);
                 });
 
             } else {
                 // Notify the player that there is no water around!
                 player.sendSystemMessage(Component.translatable(MESSAGE_NO_WATER).withStyle(ChatFormatting.RED));
                 // Output the current thirst level
-                player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
-                    player.sendSystemMessage(Component.literal("Current Thirst " + thirst.getThirst())
+                player.getCapability(PlayerManaProvider.PLAYER_MANA).ifPresent(mana -> {
+                    player.sendSystemMessage(Component.literal("Current Thirst " + mana.getMana())
                             .withStyle(ChatFormatting.AQUA));
-                    ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), player);
+                    ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(mana.getMana()), player);
                 });
             }
         });

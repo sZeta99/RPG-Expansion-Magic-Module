@@ -6,12 +6,15 @@ import net.minecraft.world.item.Item;
 public class CoolDown {
 
     public static void addCoolDown(Player player, Item item, int time) {
-        // Control for good or bad result needed
+        // add cooldown
         player.getCooldowns().addCooldown(item, time);
     }
 
     public static boolean isCoolDown(Player player, Item item) {
-        return player.getCooldowns().isOnCooldown(item);
+        System.out.println("PlayerCools : " + player.getCooldowns());
+        System.out.println("Item : " + item);
+        System.out.println("CoolDown : " + player.getCooldowns().isOnCooldown(item));
+        return true;
     }
 
 }

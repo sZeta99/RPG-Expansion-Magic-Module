@@ -22,11 +22,9 @@ import net.minecraft.world.level.Level;
 
 public class ArcaneTeleportInstant implements ISpell {
     private ASpell father;
-    private boolean exe;
 
     public ArcaneTeleportInstant(ASpell father) {
         this.father = father;
-        exe = false;
 
     }
 
@@ -35,7 +33,6 @@ public class ArcaneTeleportInstant implements ISpell {
     public InteractionResultHolder<ItemStack> onUse(ItemStack itemStack, Level level, Player player,
             InteractionHand hand) {
 
-        System.out.println("ArcaneTeleportInstant.onUse() " + exe);
         System.out.println("ArcaneTeleportInstant.onUse() " + CoolDown.isCoolDown(player, father));
         PlayerMana mana = player.getCapability(PlayerManaProvider.PLAYER_MANA)
                 .orElseThrow(NullPointerException::new);
@@ -50,8 +47,7 @@ public class ArcaneTeleportInstant implements ISpell {
             System.out.println("Mana: " + mana.getMana());
             System.out.println("ArcaneTeleportInstant");
 
-            CoolDown.addCoolDown(player, father, 50);
-            itemStack.getItem().releaseUsing(itemStack, level, player, 0);
+            // CoolDown.addCoolDown(player, father, 50);
 
             father.nextSpell(new ArcaneTeleportCharge(father));
             return InteractionResultHolder.success(itemStack);

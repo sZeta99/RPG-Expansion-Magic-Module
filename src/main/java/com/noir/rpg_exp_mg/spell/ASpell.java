@@ -1,5 +1,7 @@
 package com.noir.rpg_exp_mg.spell;
 
+import com.noir.rpg_exp_mg.custom.tool.CoolDown;
+
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -41,10 +43,9 @@ public abstract class ASpell extends Item implements ISpell {
             i = net.minecraftforge.event.ForgeEventFactory.onArrowLoose(
                     stack, level, player, i,
                     true);
-            if (i < 0)
+            if (i < 0 && spell != null && CoolDown.isCoolDown(player, this))
                 return;
 
-            System.out.println("--------------Relese-----------------");
             spell.onRelease(stack, level, player, time);
         }
 
@@ -58,7 +59,8 @@ public abstract class ASpell extends Item implements ISpell {
     @Override
     public InteractionResult useOn(UseOnContext context) {
 
-        spell.onUseOn(context);
+        if (spell != null || !CoolDown.isCoolDown(context.getPlayer(), this))
+            return spell.onUseOn(context);
 
         return super.useOn(context);
     }
@@ -66,7 +68,6 @@ public abstract class ASpell extends Item implements ISpell {
     @Override
     public boolean useOnRelease(ItemStack stack) {
 
-        spell.onUseOnRelease(stack);
         return super.useOnRelease(stack);
     }
 
@@ -74,7 +75,8 @@ public abstract class ASpell extends Item implements ISpell {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack itemstack = player.getItemInHand(hand);
 
-        spell.onUse(itemstack, level, player, hand);
+        if (spell != null || !CoolDown.isCoolDown(player, this))
+            return spell.onUse(itemstack, level, player, hand);
 
         player.startUsingItem(hand);
         return InteractionResultHolder.consume(itemstack);

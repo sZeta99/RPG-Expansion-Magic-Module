@@ -10,4 +10,8 @@ public class CoolDown {
         player.getCooldowns().addCooldown(item, time);
     }
 
+    public static boolean isCoolDown(Player player, Item item) {
+        return player.getCooldowns().isOnCooldown(item);
+    }
+
 }

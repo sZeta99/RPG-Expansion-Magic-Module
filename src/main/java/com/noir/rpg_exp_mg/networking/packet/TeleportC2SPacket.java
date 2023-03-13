@@ -5,7 +5,6 @@ import java.util.function.Supplier;
 import com.noir.rpg_exp_mg.capability.PlayerManaProvider;
 import com.noir.rpg_exp_mg.custom.tool.RayCast;
 import com.noir.rpg_exp_mg.networking.ModMessages;
-import com.noir.rpg_exp_mg.spell.preset.Teleport;
 
 import ca.weblite.objc.Message;
 import net.minecraft.ChatFormatting;

@@ -32,7 +32,9 @@ public class ArcaneTeleportCharge implements ISpell {
     @Override
     public InteractionResultHolder<ItemStack> onUse(ItemStack itemStack, Level level, Player player,
             InteractionHand hand) {
-        // TODO Auto-generated method stub
+        PlayerMana mana = player.getCapability(PlayerManaProvider.PLAYER_MANA)
+                .orElseThrow(NullPointerException::new);
+
         return null;
     }
 
@@ -51,7 +53,8 @@ public class ArcaneTeleportCharge implements ISpell {
     @Override
     public void onRelease(ItemStack itemStack, Level level, Player player, int time) {
 
-        if (time > 9000) {
+        System.out.println("ArcaneTeleportCharge.onRelese() " + time);
+        if (time > 11000) {
 
             PlayerMana mana = player.getCapability(PlayerManaProvider.PLAYER_MANA)
                     .orElseThrow(NullPointerException::new);
@@ -63,10 +66,12 @@ public class ArcaneTeleportCharge implements ISpell {
                 ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(mana.getMana()),
                         ((ServerPlayer) player));
 
-                father.nextSpell(new ArcaneTeleportInstant(father));
-
                 System.out.println("Mana: " + mana.getMana());
                 System.out.println("ArcaneTeleportCharge.onRelese() " + time);
+                CoolDown.addCoolDown(player, itemStack.getItem(), 50);
+                itemStack.getItem().releaseUsing(itemStack, level, player, 0);
+                father.nextSpell(new ArcaneTeleportInstant(father));
+
             }
         }
 

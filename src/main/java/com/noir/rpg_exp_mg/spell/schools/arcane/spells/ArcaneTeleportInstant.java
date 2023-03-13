@@ -35,6 +35,8 @@ public class ArcaneTeleportInstant implements ISpell {
     public InteractionResultHolder<ItemStack> onUse(ItemStack itemStack, Level level, Player player,
             InteractionHand hand) {
 
+        System.out.println("ArcaneTeleportInstant.onUse() " + exe);
+        System.out.println("ArcaneTeleportInstant.onUse() " + CoolDown.isCoolDown(player, father));
         PlayerMana mana = player.getCapability(PlayerManaProvider.PLAYER_MANA)
                 .orElseThrow(NullPointerException::new);
         if (mana.getMana() > 0) { // Once Every 10 Seconds
@@ -45,14 +47,15 @@ public class ArcaneTeleportInstant implements ISpell {
             ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(mana.getMana()),
                     ((ServerPlayer) player));
 
-            father.nextSpell(new ArcaneTeleportCharge(father));
-
             System.out.println("Mana: " + mana.getMana());
             System.out.println("ArcaneTeleportInstant");
 
-            exe = true;
-            CoolDown.addCoolDown(player, itemStack.getItem(), 50);
+            CoolDown.addCoolDown(player, father, 50);
+            itemStack.getItem().releaseUsing(itemStack, level, player, 0);
+
+            father.nextSpell(new ArcaneTeleportCharge(father));
             return InteractionResultHolder.success(itemStack);
+
         }
         return null;
     }

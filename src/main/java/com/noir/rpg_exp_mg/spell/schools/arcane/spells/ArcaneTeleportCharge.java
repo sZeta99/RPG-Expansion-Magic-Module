@@ -54,7 +54,7 @@ public class ArcaneTeleportCharge implements ISpell {
     public void onRelease(ItemStack itemStack, Level level, Player player, int time) {
 
         System.out.println("ArcaneTeleportCharge.onRelese() " + time);
-        if (time > 11000) {
+        if (time > 50) {
 
             PlayerMana mana = player.getCapability(PlayerManaProvider.PLAYER_MANA)
                     .orElseThrow(NullPointerException::new);
@@ -62,6 +62,7 @@ public class ArcaneTeleportCharge implements ISpell {
 
                 ModMessages.sendToServer(new TeleportC2SPacket());
                 mana.subMana(1);
+                CoolDown.addCoolDown(player, father, 50);
                 Sound.playSound(level, player, SoundEvents.ENDERMAN_TELEPORT);
                 ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(mana.getMana()),
                         ((ServerPlayer) player));

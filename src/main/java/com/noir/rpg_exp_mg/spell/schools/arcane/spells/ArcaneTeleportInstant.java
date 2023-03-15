@@ -40,6 +40,7 @@ public class ArcaneTeleportInstant implements ISpell {
 
             ModMessages.sendToServer(new TeleportC2SPacket());
             mana.subMana(1);
+            CoolDown.addCoolDown(player, father, 50);
             Sound.playSound(level, player, SoundEvents.ENDERMAN_TELEPORT);
             ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(mana.getMana()),
                     ((ServerPlayer) player));

@@ -11,10 +11,8 @@ public class CoolDown {
     }
 
     public static boolean isCoolDown(Player player, Item item) {
-        System.out.println("PlayerCools : " + player.getCooldowns());
-        System.out.println("Item : " + item);
-        System.out.println("CoolDown : " + player.getCooldowns().isOnCooldown(item));
-        return true;
+
+        return player.getCooldowns().isOnCooldown(item);
     }
 
 }

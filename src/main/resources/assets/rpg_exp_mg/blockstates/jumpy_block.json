@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "tutorialmod:block/jumpy_block" }
+    "": { "model": "rpg_exp_mg:block/jumpy_block" }
   }
 }

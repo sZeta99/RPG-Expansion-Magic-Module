@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "tutorialmod:block/zircon_ore" }
+    "": { "model": "rpg_exp_mg:block/zircon_ore" }
   }
 }

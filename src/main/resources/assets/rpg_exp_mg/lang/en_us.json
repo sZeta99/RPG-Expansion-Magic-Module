@@ -1,25 +1,25 @@
 {
-  "item.tutorialmod.zircon": "Zircon",
-  "item.tutorialmod.raw_zircon": "Raw Zircon",
-  "item.tutorialmod.eight_ball": "Eight Ball",
-  "item.tutorialmod.blueberry": "Blueberry",
-  "item.tutorialmod.blueberry_seeds": "Blueberry Seeds",
+  "item.rpg_exp_mg.zircon": "Zircon",
+  "item.rpg_exp_mg.raw_zircon": "Raw Zircon",
+  "item.rpg_exp_mg.eight_ball": "Eight Ball",
+  "item.rpg_exp_mg.blueberry": "Blueberry",
+  "item.rpg_exp_mg.blueberry_seeds": "Blueberry Seeds",
 
-  "block.tutorialmod.zircon_block": "Block of Zircon",
-  "block.tutorialmod.zircon_ore": "Zircon Ore",
-  "block.tutorialmod.deepslate_zircon_ore": "Deepslate Zircon Ore",
-  "block.tutorialmod.jumpy_block": "Jumpy Block",
-  "block.tutorialmod.zircon_lamp": "Zircon Lamp",
-  "block.tutorialmod.blueberry_crop": "Blueberry Crop",
-  "block.tutorialmod.endstone_zircon_ore": "Endstone Zircon Ore",
-  "block.tutorialmod.netherrack_zircon_ore": "Netherrack Zircon Ore",
+  "block.rpg_exp_mg.zircon_block": "Block of Zircon",
+  "block.rpg_exp_mg.zircon_ore": "Zircon Ore",
+  "block.rpg_exp_mg.deepslate_zircon_ore": "Deepslate Zircon Ore",
+  "block.rpg_exp_mg.jumpy_block": "Jumpy Block",
+  "block.rpg_exp_mg.zircon_lamp": "Zircon Lamp",
+  "block.rpg_exp_mg.blueberry_crop": "Blueberry Crop",
+  "block.rpg_exp_mg.endstone_zircon_ore": "Endstone Zircon Ore",
+  "block.rpg_exp_mg.netherrack_zircon_ore": "Netherrack Zircon Ore",
 
   "itemGroup.tutorialtab": "Zircon Tutorial Tab",
-  "entity.minecraft.villager.tutorialmod.jumpy_master": "Jumpy Master",
+  "entity.minecraft.villager.rpg_exp_mg.jumpy_master": "Jumpy Master",
 
-  "key.category.tutorialmod.tutorial": "Tutorial Mod",
-  "key.tutorialmod.drink_water": "Drink Water",
+  "key.category.rpg_exp_mg.tutorial": "Tutorial Mod",
+  "key.rpg_exp_mg.drink_water": "Drink Water",
 
-  "message.tutorialmod.drink_water": "Drinking Water",
-  "message.tutorialmod.no_water": "No water nearby!"
+  "message.rpg_exp_mg.drink_water": "Drinking Water",
+  "message.rpg_exp_mg.no_water": "No water nearby!"
 }

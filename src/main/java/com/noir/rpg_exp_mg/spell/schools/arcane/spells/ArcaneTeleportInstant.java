@@ -1,9 +1,17 @@
 package com.noir.rpg_exp_mg.spell.schools.arcane.spells;
 
+import com.noir.rpg_exp_mg.capability.PlayerMana;
+import com.noir.rpg_exp_mg.capability.PlayerManaProvider;
 import com.noir.rpg_exp_mg.custom.tool.CoolDown;
+import com.noir.rpg_exp_mg.custom.tool.Sound;
+import com.noir.rpg_exp_mg.networking.ModMessages;
+import com.noir.rpg_exp_mg.networking.packet.TeleportC2SPacket;
+import com.noir.rpg_exp_mg.networking.packet.ThirstDataSyncS2CPacket;
 import com.noir.rpg_exp_mg.spell.ASpell;
 import com.noir.rpg_exp_mg.spell.ISpell;
 
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -14,11 +22,9 @@ import net.minecraft.world.level.Level;
 
 public class ArcaneTeleportInstant implements ISpell {
     private ASpell father;
-    private boolean exe;
 
     public ArcaneTeleportInstant(ASpell father) {
         this.father = father;
-        exe = false;
 
     }
 
@@ -26,12 +32,27 @@ public class ArcaneTeleportInstant implements ISpell {
     @Override
     public InteractionResultHolder<ItemStack> onUse(ItemStack itemStack, Level level, Player player,
             InteractionHand hand) {
-        if (ArcaneTeleport.canExe(level, player, father)) {
-            ArcaneTeleport.exe(level, player, father);
-            exe = true;
-            System.out.println("ArcaneTeleportInstant.onUse()");
-        } else {
-            System.out.println("ArcaneTeleportInstant.onUse() not done");
+
+        System.out.println("ArcaneTeleportInstant.onUse() " + CoolDown.isCoolDown(player, father));
+        PlayerMana mana = player.getCapability(PlayerManaProvider.PLAYER_MANA)
+                .orElseThrow(NullPointerException::new);
+        if (mana.getMana() > 0) { // Once Every 10 Seconds
+
+            ModMessages.sendToServer(new TeleportC2SPacket());
+            mana.subMana(1);
+            CoolDown.addCoolDown(player, father, 50);
+            Sound.playSound(level, player, SoundEvents.ENDERMAN_TELEPORT);
+            ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(mana.getMana()),
+                    ((ServerPlayer) player));
+
+            System.out.println("Mana: " + mana.getMana());
+            System.out.println("ArcaneTeleportInstant");
+
+            // CoolDown.addCoolDown(player, father, 50);
+
+            father.nextSpell(new ArcaneTeleportCharge(father));
+            return InteractionResultHolder.success(itemStack);
+
         }
         return null;
     }
@@ -50,12 +71,6 @@ public class ArcaneTeleportInstant implements ISpell {
 
     @Override
     public void onRelease(ItemStack itemStack, Level level, Player player, int time) {
-        if (exe) {
-            // Look if exit a method to stop using item
-            CoolDown.addCoolDown(player, itemStack.getItem(), 50);
-            father.nextSpell(new ArcaneTeleportCharge(father));
-            exe = false;
-        }
 
     }
 

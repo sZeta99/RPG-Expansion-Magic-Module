@@ -1,6 +1,8 @@
 package com.noir.rpg_exp_mg.networking.packet;
 
-import com.noir.rpg_exp_mg.energy.PlayerManaProvider;
+import com.noir.rpg_exp_mg.capability.PlayerManaProvider;
+import com.noir.rpg_exp_mg.networking.ModMessages;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
@@ -16,8 +18,9 @@ import net.minecraftforge.network.NetworkEvent;
 import java.util.function.Supplier;
 
 public class DrinkWaterC2SPacket {
-    private static final String MESSAGE_DRINK_WATER = "message.tutorialmod.drink_water";
-    private static final String MESSAGE_NO_WATER = "message.tutorialmod.no_water";
+
+    private static final String MESSAGE_DRINK_WATER = "message.rpg_exp_mg.drink_water";
+    private static final String MESSAGE_NO_WATER = "message.rpg_exp_mg.no_water";
 
     public DrinkWaterC2SPacket() {
 
@@ -40,25 +43,29 @@ public class DrinkWaterC2SPacket {
 
             if (hasWaterAroundThem(player, level, 2)) {
                 // Notify the player that water has been drunk
-                player.sendMessage(Component.nullToEmpty("You drank some water!"), player.getUUID());
+                player.sendSystemMessage(
+                        Component.translatable(MESSAGE_DRINK_WATER).withStyle(ChatFormatting.DARK_AQUA));
                 // play the drinking sound
                 level.playSound(null, player.getOnPos(), SoundEvents.GENERIC_DRINK, SoundSource.PLAYERS,
                         0.5F, level.random.nextFloat() * 0.1F + 0.9F);
 
-                // increase the water level / Mana level of player
-                player.getCapability(PlayerManaProvider.PLAYER_MANA_CAPABILITY).ifPresent(mana -> {
+                // increase the water level / thirst level of player
+                // Output the current thirst level
+                player.getCapability(PlayerManaProvider.PLAYER_MANA).ifPresent(mana -> {
                     mana.addMana(1);
-                    player.sendMessage(Component.nullToEmpty("Current Mana " + mana.getMana()), player.getUUID());
+                    player.sendSystemMessage(Component.literal("Current Thirst " + mana.getMana())
+                            .withStyle(ChatFormatting.AQUA));
+                    ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(mana.getMana()), player);
                 });
-
-                // Output the current Mana level
 
             } else {
                 // Notify the player that there is no water around!
-                player.sendMessage(Component.nullToEmpty("There is no water around!"), player.getUUID());
-                // Output the current Mana level
-                player.getCapability(PlayerManaProvider.PLAYER_MANA_CAPABILITY).ifPresent(mana -> {
-                    player.sendMessage(Component.nullToEmpty("Current Mana " + mana.getMana()), player.getUUID());
+                player.sendSystemMessage(Component.translatable(MESSAGE_NO_WATER).withStyle(ChatFormatting.RED));
+                // Output the current thirst level
+                player.getCapability(PlayerManaProvider.PLAYER_MANA).ifPresent(mana -> {
+                    player.sendSystemMessage(Component.literal("Current Thirst " + mana.getMana())
+                            .withStyle(ChatFormatting.AQUA));
+                    ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(mana.getMana()), player);
                 });
             }
         });

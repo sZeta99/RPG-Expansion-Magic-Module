@@ -1,8 +1,17 @@
 package com.noir.rpg_exp_mg.spell.schools.arcane.spells;
 
+import com.noir.rpg_exp_mg.capability.PlayerMana;
+import com.noir.rpg_exp_mg.capability.PlayerManaProvider;
 import com.noir.rpg_exp_mg.custom.tool.CoolDown;
+import com.noir.rpg_exp_mg.custom.tool.Sound;
+import com.noir.rpg_exp_mg.networking.ModMessages;
+import com.noir.rpg_exp_mg.networking.packet.TeleportC2SPacket;
+import com.noir.rpg_exp_mg.networking.packet.ThirstDataSyncS2CPacket;
 import com.noir.rpg_exp_mg.spell.ASpell;
 import com.noir.rpg_exp_mg.spell.ISpell;
+
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -23,7 +32,9 @@ public class ArcaneTeleportCharge implements ISpell {
     @Override
     public InteractionResultHolder<ItemStack> onUse(ItemStack itemStack, Level level, Player player,
             InteractionHand hand) {
-        // TODO Auto-generated method stub
+
+        System.out.println("ArcaneTeleportCharge.onUse() ");
+
         return null;
     }
 
@@ -42,14 +53,27 @@ public class ArcaneTeleportCharge implements ISpell {
     @Override
     public void onRelease(ItemStack itemStack, Level level, Player player, int time) {
 
-        if (ArcaneTeleport.canExe(level, player, father) && time > 2000) {
-            ArcaneTeleport.exe(level, player, father);
-            CoolDown.addCoolDown(player, itemStack.getItem(), 50);
-            father.nextSpell(new ArcaneTeleportInstant(father));
+        System.out.println("ArcaneTeleportCharge.onRelese() " + time);
+        if (time > 50) {
 
-            System.out.println("ArcaneTeleportCharge.onRelese() " + time);
-        } else {
-            System.out.println("ArcaneTeleportCharge.onRelese() not done");
+            PlayerMana mana = player.getCapability(PlayerManaProvider.PLAYER_MANA)
+                    .orElseThrow(NullPointerException::new);
+            if (mana.getMana() > 0) { // Once Every 10 Seconds
+
+                ModMessages.sendToServer(new TeleportC2SPacket());
+                mana.subMana(1);
+                CoolDown.addCoolDown(player, father, 50);
+                Sound.playSound(level, player, SoundEvents.ENDERMAN_TELEPORT);
+                ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(mana.getMana()),
+                        ((ServerPlayer) player));
+
+                System.out.println("Mana: " + mana.getMana());
+                System.out.println("ArcaneTeleportCharge.onRelese() " + time);
+                // CoolDown.addCoolDown(player, itemStack.getItem(), 50);
+
+                father.nextSpell(new ArcaneTeleportInstant(father));
+
+            }
         }
 
     }

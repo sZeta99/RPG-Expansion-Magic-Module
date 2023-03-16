@@ -1,8 +1,10 @@
 package com.noir.rpg_exp_mg.networking;
 
-import com.noir.rpg_exp_mg.RpgExpansionMagicModuleMod;
+import com.noir.rpg_exp_mg.RpgExpantionMagicModule;
 import com.noir.rpg_exp_mg.networking.packet.DrinkWaterC2SPacket;
 import com.noir.rpg_exp_mg.networking.packet.ExampleC2SPacket;
+import com.noir.rpg_exp_mg.networking.packet.TeleportC2SPacket;
+import com.noir.rpg_exp_mg.networking.packet.ThirstDataSyncS2CPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkDirection;
@@ -21,7 +23,7 @@ public class ModMessages {
 
     public static void register() {
         SimpleChannel net = NetworkRegistry.ChannelBuilder
-                .named(new ResourceLocation(RpgExpansionMagicModuleMod.MOD_ID, "messages"))
+                .named(new ResourceLocation(RpgExpantionMagicModule.MOD_ID, "messages"))
                 .networkProtocolVersion(() -> "1.0")
                 .clientAcceptedVersions(s -> true)
                 .serverAcceptedVersions(s -> true)
@@ -32,13 +34,23 @@ public class ModMessages {
         net.messageBuilder(ExampleC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
                 .decoder(ExampleC2SPacket::new)
                 .encoder(ExampleC2SPacket::toBytes)
-                .consumer(ExampleC2SPacket::handle)
+                .consumerMainThread(ExampleC2SPacket::handle)
                 .add();
 
         net.messageBuilder(DrinkWaterC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
                 .decoder(DrinkWaterC2SPacket::new)
                 .encoder(DrinkWaterC2SPacket::toBytes)
-                .consumer(DrinkWaterC2SPacket::handle)
+                .consumerMainThread(DrinkWaterC2SPacket::handle)
+                .add();
+        net.messageBuilder(TeleportC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(TeleportC2SPacket::new)
+                .encoder(TeleportC2SPacket::toBytes)
+                .consumerMainThread(TeleportC2SPacket::handle)
+                .add();
+        net.messageBuilder(ThirstDataSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(ThirstDataSyncS2CPacket::new)
+                .encoder(ThirstDataSyncS2CPacket::toBytes)
+                .consumerMainThread(ThirstDataSyncS2CPacket::handle)
                 .add();
     }
 

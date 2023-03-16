@@ -1,5 +1,7 @@
 package com.noir.rpg_exp_mg.spell;
 
+import com.noir.rpg_exp_mg.custom.tool.CoolDown;
+
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -21,19 +23,19 @@ public abstract class ASpell extends Item implements ISpell {
      * 
      * @param properties
      */
-    public ASpell(Properties properties, ISpell spell) {
+    protected ASpell(Properties properties, ISpell spell) {
         super(properties);
         this.spell = spell;
     }
 
-    public ASpell(Properties properties) {
+    protected ASpell(Properties properties) {
         super(properties);
         this.spell = null;
     }
 
     @Override
     public void releaseUsing(ItemStack stack, Level level, LivingEntity entity, int time) {
-        // System.out.println("--------------Relese-----------------");
+
         if (entity instanceof Player) {
             Player player = (Player) entity;
 
@@ -44,13 +46,15 @@ public abstract class ASpell extends Item implements ISpell {
             if (i < 0)
                 return;
 
-            System.out.println("--------------Relese-----------------");
-            spell.onRelease(stack, level, player, time);
+            if (!CoolDown.isCoolDown(player, this))
+                spell.onRelease(stack, level, player, i);
+
         }
 
     }
 
     // Fondamentale per usare relese
+    @Override
     public int getUseDuration(ItemStack stack) {
         return 72000;
     }
@@ -74,7 +78,8 @@ public abstract class ASpell extends Item implements ISpell {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack itemstack = player.getItemInHand(hand);
 
-        spell.onUse(itemstack, level, player, hand);
+        if (!CoolDown.isCoolDown(player, this))
+            spell.onUse(itemstack, level, player, hand);
 
         player.startUsingItem(hand);
         return InteractionResultHolder.consume(itemstack);
@@ -86,6 +91,7 @@ public abstract class ASpell extends Item implements ISpell {
             InteractionHand hand) {
 
         return spell.onUse(itemStack, level, player, hand);
+
     }
 
     @Override

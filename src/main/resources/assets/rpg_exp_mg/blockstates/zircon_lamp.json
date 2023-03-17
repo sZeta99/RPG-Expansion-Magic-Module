@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "lit=true": { "model": "rpg_exp_mg:block/zircon_lamp_on" },
-    "lit=false": { "model": "rpg_exp_mg:block/zircon_lamp_off" }
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "rpg_exp_mg:block/zircon_block"
-  }
-}

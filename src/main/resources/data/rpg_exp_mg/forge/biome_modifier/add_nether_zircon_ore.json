@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_nether",
-  "features": "rpg_exp_mg:nether_zircon_ore_placed",
+  "features": "rpg_exp_mg:nether_mana_crystal_ore_placed",
   "step": "underground_ores"
 }

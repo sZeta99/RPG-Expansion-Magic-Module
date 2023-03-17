@@ -13,13 +13,13 @@ public class ModItems {
         public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
                         RpgExpantionMagicModule.MOD_ID);
 
-        public static final RegistryObject<Item> ZIRCON = ITEMS.register("zircon",
-                        () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
-        public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
-                        () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+        public static final RegistryObject<Item> MANA_CRYSTAL = ITEMS.register("mana_crystal",
+                        () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MAGIC_TAB)));
+        public static final RegistryObject<Item> RAW_MANA_CRYSTAL = ITEMS.register("raw_mana_crystal",
+                        () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MAGIC_TAB)));
         public static final RegistryObject<Item> ARCANE_TELEPORT = ITEMS.register("arcane_teleport",
                         () -> new ArcaneTeleport(
-                                        new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).durability(1)));
+                                        new Item.Properties().tab(ModCreativeModeTab.MAGIC_TAB).durability(1)));
 
         public static void register(IEventBus eventBus) {
                 ITEMS.register(eventBus);

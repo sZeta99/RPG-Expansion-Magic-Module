@@ -36,7 +36,7 @@ public class ModEvents {
     public static void addCustomTrades(VillagerTradesEvent event) {
         if (event.getType() == VillagerProfession.TOOLSMITH) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(ModItems.RAW_ZIRCON.get(), 1);
+            ItemStack stack = new ItemStack(ModItems.RAW_MANA_CRYSTAL.get(), 1);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
@@ -46,7 +46,7 @@ public class ModEvents {
 
         if (event.getType() == ModVillagers.JUMP_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(ModItems.ZIRCON.get(), 15);
+            ItemStack stack = new ItemStack(ModItems.MANA_CRYSTAL.get(), 15);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(

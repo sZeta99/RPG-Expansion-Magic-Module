@@ -14,20 +14,22 @@ public class ModPlacedFeatures {
     public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister
             .create(Registry.PLACED_FEATURE_REGISTRY, RpgExpantionMagicModule.MOD_ID);
 
-    public static final RegistryObject<PlacedFeature> ZIRCON_ORE_PLACED = PLACED_FEATURES.register("zircon_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.ZIRCON_ORE.getHolder().get(),
+    public static final RegistryObject<PlacedFeature> MANA_CRYSTAL_ORE_PLACED = PLACED_FEATURES.register(
+            "mana_crystal_ore_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.MANA_CRYSTAL_ORE.getHolder().get(),
                     commonOrePlacement(7, // VeinsPerChunk
                             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80),
                                     VerticalAnchor.aboveBottom(80)))));
 
-    public static final RegistryObject<PlacedFeature> END_ZIRCON_ORE_PLACED = PLACED_FEATURES.register(
-            "end_zircon_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.END_ZIRCON_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
+    public static final RegistryObject<PlacedFeature> END_MANA_CRYSTAL_ORE_PLACED = PLACED_FEATURES.register(
+            "end_mana_crystal_ore_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.END_MANA_CRYSTAL_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
-    public static final RegistryObject<PlacedFeature> NETHER_ZIRCON_ORE_PLACED = PLACED_FEATURES.register(
-            "nether_zircon_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.NETHER_ZIRCON_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
+    public static final RegistryObject<PlacedFeature> NETHER_MANA_CRYSTAL_ORE_PLACED = PLACED_FEATURES.register(
+            "nether_mana_crystal_ore_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.NETHER_MANA_CRYSTAL_ORE.getHolder().get(), commonOrePlacement(
+                    7, // VeinsPerChunk
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {

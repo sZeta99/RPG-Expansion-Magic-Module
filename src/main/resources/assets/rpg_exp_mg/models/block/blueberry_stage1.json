@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/crop",
-  "textures": {
-    "crop": "rpg_exp_mg:block/blueberry_stage1"
-  },
-  "render_type": "cutout"
-}

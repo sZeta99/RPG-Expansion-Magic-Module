@@ -21,31 +21,37 @@ public class ModConfiguredFeatures {
         public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = DeferredRegister
                         .create(Registry.CONFIGURED_FEATURE_REGISTRY, RpgExpantionMagicModule.MOD_ID);
 
-        public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_ZIRCON_ORES = Suppliers
+        public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_MANA_CRYSTAL_ORES = Suppliers
                         .memoize(() -> List.of(
                                         OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,
-                                                        ModBlocks.ZIRCON_ORE.get().defaultBlockState()),
+                                                        ModBlocks.MANA_CRYSTAL_ORE.get().defaultBlockState()),
                                         OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,
-                                                        ModBlocks.DEEPSLATE_ZIRCON_ORE.get().defaultBlockState())));
-        public static final Supplier<List<OreConfiguration.TargetBlockState>> END_ZIRCON_ORES = Suppliers
+                                                        ModBlocks.DEEPSLATE_MANA_CRYSTAL_ORE.get()
+                                                                        .defaultBlockState())));
+        public static final Supplier<List<OreConfiguration.TargetBlockState>> END_MANA_CRYSTAL_ORES = Suppliers
                         .memoize(() -> List.of(
                                         OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),
-                                                        ModBlocks.ENDSTONE_ZIRCON_ORE.get().defaultBlockState())));
-        public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_ZIRCON_ORES = Suppliers
+                                                        ModBlocks.ENDSTONE_MANA_CRYSTAL_ORE.get()
+                                                                        .defaultBlockState())));
+        public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_MANA_CRYSTAL_ORES = Suppliers
                         .memoize(() -> List.of(
                                         OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES,
-                                                        ModBlocks.NETHERRACK_ZIRCON_ORE.get().defaultBlockState())));
+                                                        ModBlocks.NETHERRACK_MANA_CRYSTAL_ORE.get()
+                                                                        .defaultBlockState())));
 
-        public static final RegistryObject<ConfiguredFeature<?, ?>> ZIRCON_ORE = CONFIGURED_FEATURES.register(
-                        "zircon_ore",
+        public static final RegistryObject<ConfiguredFeature<?, ?>> MANA_CRYSTAL_ORE = CONFIGURED_FEATURES.register(
+                        "mana_crystal_ore",
                         () -> new ConfiguredFeature<>(Feature.ORE,
-                                        new OreConfiguration(OVERWORLD_ZIRCON_ORES.get(), 7)));
-        public static final RegistryObject<ConfiguredFeature<?, ?>> END_ZIRCON_ORE = CONFIGURED_FEATURES.register(
-                        "end_zircon_ore",
-                        () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(END_ZIRCON_ORES.get(), 9)));
-        public static final RegistryObject<ConfiguredFeature<?, ?>> NETHER_ZIRCON_ORE = CONFIGURED_FEATURES.register(
-                        "nether_zircon_ore",
-                        () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(NETHER_ZIRCON_ORES.get(), 9)));
+                                        new OreConfiguration(OVERWORLD_MANA_CRYSTAL_ORES.get(), 7)));
+        public static final RegistryObject<ConfiguredFeature<?, ?>> END_MANA_CRYSTAL_ORE = CONFIGURED_FEATURES.register(
+                        "end_mana_crystal_ore",
+                        () -> new ConfiguredFeature<>(Feature.ORE,
+                                        new OreConfiguration(END_MANA_CRYSTAL_ORES.get(), 9)));
+        public static final RegistryObject<ConfiguredFeature<?, ?>> NETHER_MANA_CRYSTAL_ORE = CONFIGURED_FEATURES
+                        .register(
+                                        "nether_mana_crystal_ore",
+                                        () -> new ConfiguredFeature<>(Feature.ORE,
+                                                        new OreConfiguration(NETHER_MANA_CRYSTAL_ORES.get(), 9)));
 
         public static void register(IEventBus eventBus) {
                 CONFIGURED_FEATURES.register(eventBus);

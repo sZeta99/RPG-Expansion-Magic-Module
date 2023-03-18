@@ -1,7 +1,7 @@
 package com.noir.rpg_exp_mg.block;
 
 import com.noir.rpg_exp_mg.RpgExpantionMagicModule;
-import com.noir.rpg_exp_mg.block.custom.JumpyBlock;
+import com.noir.rpg_exp_mg.block.custom.MageBench;
 import com.noir.rpg_exp_mg.item.ModCreativeModeTab;
 import com.noir.rpg_exp_mg.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -47,8 +47,8 @@ public class ModBlocks {
                                         UniformInt.of(3, 7)),
                         ModCreativeModeTab.MAGIC_TAB);
 
-        public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
-                        () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
+        public static final RegistryObject<Block> MAGE_BENCH = registerBlock("mage_bench",
+                        () -> new MageBench(BlockBehaviour.Properties.of(Material.STONE)
                                         .strength(6f).requiresCorrectToolForDrops()),
                         ModCreativeModeTab.MAGIC_TAB);
 

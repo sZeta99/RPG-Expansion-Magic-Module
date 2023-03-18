@@ -14,8 +14,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class JumpyBlock extends Block {
-    public JumpyBlock(Properties properties) {
+public class MageBench extends Block {
+    public MageBench(Properties properties) {
         super(properties);
     }
 
@@ -25,7 +25,7 @@ public class JumpyBlock extends Block {
         // Server: Main Hand & Off Hand
         // Client: Main Hand & Off Hand
 
-        player.sendSystemMessage(Component.literal("Right Clicked this!"));
+        player.sendSystemMessage(Component.literal("MageBench!"));
 
         return super.use(state, level, blockPos, player, hand, blockHitResult);
     }

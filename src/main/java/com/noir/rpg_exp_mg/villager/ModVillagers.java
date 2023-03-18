@@ -20,19 +20,19 @@ public class ModVillagers {
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS = DeferredRegister
             .create(ForgeRegistries.VILLAGER_PROFESSIONS, RpgExpantionMagicModule.MOD_ID);
 
-    public static final RegistryObject<PoiType> JUMPY_BLOCK_POI = POI_TYPES.register("jumpy_block_poi",
-            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.JUMPY_BLOCK.get().getStateDefinition().getPossibleStates()),
+    public static final RegistryObject<PoiType> MAGE_BENCH_POI = POI_TYPES.register("mage_bench_poi",
+            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.MAGE_BENCH.get().getStateDefinition().getPossibleStates()),
                     1, 1));
 
     public static final RegistryObject<VillagerProfession> JUMP_MASTER = VILLAGER_PROFESSIONS.register("mage",
-            () -> new VillagerProfession("mage", x -> x.get() == JUMPY_BLOCK_POI.get(),
-                    x -> x.get() == JUMPY_BLOCK_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+            () -> new VillagerProfession("mage", x -> x.get() == MAGE_BENCH_POI.get(),
+                    x -> x.get() == MAGE_BENCH_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_ARMORER));
 
     public static void registerPOIs() {
         try {
             ObfuscationReflectionHelper.findMethod(PoiType.class,
-                    "registerBlockStates", PoiType.class).invoke(null, JUMPY_BLOCK_POI.get());
+                    "registerBlockStates", PoiType.class).invoke(null, MAGE_BENCH_POI.get());
         } catch (InvocationTargetException | IllegalAccessException exception) {
             exception.printStackTrace();
         }

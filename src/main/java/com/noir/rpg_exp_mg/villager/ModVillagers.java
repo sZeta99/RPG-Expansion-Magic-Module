@@ -24,7 +24,7 @@ public class ModVillagers {
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.MAGE_BENCH.get().getStateDefinition().getPossibleStates()),
                     1, 1));
 
-    public static final RegistryObject<VillagerProfession> JUMP_MASTER = VILLAGER_PROFESSIONS.register("mage",
+    public static final RegistryObject<VillagerProfession> MAGE = VILLAGER_PROFESSIONS.register("mage",
             () -> new VillagerProfession("mage", x -> x.get() == MAGE_BENCH_POI.get(),
                     x -> x.get() == MAGE_BENCH_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_ARMORER));

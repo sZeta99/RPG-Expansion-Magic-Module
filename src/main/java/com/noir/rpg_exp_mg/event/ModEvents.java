@@ -44,7 +44,7 @@ public class ModEvents {
                     stack, 10, 8, 0.02F));
         }
 
-        if (event.getType() == ModVillagers.JUMP_MASTER.get()) {
+        if (event.getType() == ModVillagers.MAGE.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModItems.MANA_CRYSTAL.get(), 15);
             int villagerLevel = 1;

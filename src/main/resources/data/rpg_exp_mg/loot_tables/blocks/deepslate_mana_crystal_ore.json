@@ -25,7 +25,7 @@
                   }
                 }
               ],
-              "name": "rpg_exp_mg:deepslate_zircon_ore"
+              "name": "rpg_exp_mg:deepslate_mana_crystal_ore"
             },
             {
               "type": "minecraft:item",
@@ -48,7 +48,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "rpg_exp_mg:raw_zircon"
+              "name": "rpg_exp_mg:raw_mana_crystal"
             }
           ]
         }
